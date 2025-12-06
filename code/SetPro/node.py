@@ -11,15 +11,6 @@ from dotenv import load_dotenv
 
 from utils.prompt_templates import REPI_RENODE_PROMPT
 
-# ✅ 首先设置环境变量（在所有导入之前）
-os.environ['IDEALAB_API_KEY'] = '8b7ea2adc097b0b9de28638e68522244'  # 你的API Key
-os.environ['MODEL_NAME'] = 'gpt-4o-0806-global'
-os.environ['MAX_RETRY'] = '4'
-
-print("✅ 环境变量配置完成")
-print(f"   - API Key: {os.environ['IDEALAB_API_KEY'][:10]}...")
-print(f"   - Model: {os.environ['MODEL_NAME']}")
-
 # 项目路径设置
 current_dir = os.path.dirname(os.path.abspath(__file__))  # SetPro目录
 code_dir = os.path.dirname(current_dir)  # code目录
@@ -121,14 +112,19 @@ class AIQuestionGenerator:
 你的唯一输出，就是"工匠"人格最终产出的、高质量的LaTeX源码。整个内部双核协作过程对用户保持静默。
 """
 
-    def __init__(self, api_key: str = None, model: str = "DeepSeek-R1-671B"):
-        self.api_key = "8b7ea2adc097b0b9de28638e68522244"  # ✅ 直接写实际的API Key
-        self.model = model or 'MODEL_NAME'
+    def __init__(self, api_key: str | None = None, model: str | None = None):
+        self.api_key = api_key or os.getenv("DEEPSEEK_API_KEY") or os.getenv("LLM_API_KEY") or os.getenv("OPENAI_API_KEY")
+        self.model = model or os.getenv("MODEL_NAME") or "DeepSeek-R1-671B"
+
+        if not self.api_key:
+            raise ValueError("缺少 DeepSeek API Key，请在初始化时传入或设置环境变量。")
+
+        base_url = os.getenv("DEEPSEEK_BASE_URL") or os.getenv("LLM_BASE_URL") or "https://api.deepseek.com/v1"
 
         try:
             self.client = OpenAI(
                 api_key=self.api_key,
-                base_url=os.getenv("DEEPSEEK_BASE_URL") or os.getenv("LLM_BASE_URL") or "https://api.deepseek.com/v1",
+                base_url=base_url,
             )
             print("✅ OpenAI客户端已初始化")
         except Exception as e:

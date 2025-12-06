@@ -9,10 +9,25 @@ def _resolve_base_url(base_url: Optional[str] = None) -> str:
 
 class ImageEncoder:
     def __init__(self, api_key: str, base_url: str | None = None):
+        self.base_url = _resolve_base_url(base_url)
         self.client = OpenAI(
             api_key=api_key,
-            base_url=_resolve_base_url(base_url)
+            base_url=self.base_url
         )
+
+    def _get_vision_model(self) -> str:
+        env_model = (
+            os.getenv("DEEPSEEK_VISION_MODEL")
+            or os.getenv("VISION_MODEL")
+            or os.getenv("OPENAI_VISION_MODEL")
+        )
+        if env_model:
+            return env_model
+
+        # Default to DeepSeek vision for DeepSeek endpoints, otherwise fall back to OpenAI's model
+        if "openai" in self.base_url:
+            return "gpt-4o-mini-vision"
+        return "deepseek-vl-1.3"
 
     def encode_image_with_qwen(self, image_url: str, question_text: str) -> Optional[str]:
         """util
@@ -35,7 +50,7 @@ class ImageEncoder:
 
         try:
             completion = self.client.chat.completions.create(
-                model="gpt-4o-mini-vision",
+                model=self._get_vision_model(),
                 messages=[{
                     "role": "user",
                     "content": [
@@ -66,7 +81,7 @@ class ImageEncoder:
                   f"你只需重构题目，不需要解答,只输出lean语言描述，注视可以用中文")
         try:
             completion = self.client.chat.completions.create(
-                model="gpt-4o-mini-vision",
+                model=self._get_vision_model(),
                 messages=[{"role": "user", "content": [
                     {"type": "image_url",
                      "image_url": {"url": f"{image_url}"}},

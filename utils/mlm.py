@@ -17,6 +17,20 @@ def _get_model():
     return os.getenv('DEEPSEEK_MODEL') or os.getenv('MODEL_NAME') or "deepseek-chat"
 
 
+def _get_vision_model(base_url: str):
+    env_model = (
+        os.getenv("DEEPSEEK_VISION_MODEL")
+        or os.getenv("VISION_MODEL")
+        or os.getenv("OPENAI_VISION_MODEL")
+    )
+    if env_model:
+        return env_model
+
+    if "openai" in base_url:
+        return "gpt-4o-mini-vision"
+    return "deepseek-vl-1.3"
+
+
 def call_llm_stream(prompt):
     client = OpenAI(
         api_key=_get_api_key(),
@@ -43,9 +57,10 @@ def call_llm_stream(prompt):
     return full_content
 
 def call_llm_stream_img(prompt: str, url: str):
+    base_url = _get_base_url()
     client = OpenAI(
         api_key=_get_api_key(),
-        base_url=_get_base_url(),
+        base_url=base_url,
     )
 
     # 正确的 messages 结构
@@ -67,7 +82,7 @@ def call_llm_stream_img(prompt: str, url: str):
 
     try:
         response = client.chat.completions.create(
-            model=_get_model(),
+            model=_get_vision_model(base_url),
             messages=messages,
             temperature=0.7,
             stream=True
