@@ -61,24 +61,19 @@ class QuestionGenerator:
 
     
     def __init__(self, api_key: str = None, model: str = None):
-  
-       # 兼容 dsapi/IdeaLab：优先 LLM_API_KEY，其次 IDEALAB_API_KEY
-        self.api_key = api_key or os.getenv("LLM_API_KEY") or os.getenv("IDEALAB_API_KEY")
-        # base_url 可通过 LLM_BASE_URL 配置，默认 DashScope 兼容端点
-        self.base_url = os.getenv("LLM_BASE_URL", "https://dashscope.aliyuncs.com/compatible-mode/v1")
-        self.model = model or os.getenv("MODEL_NAME", "qwen2.5-max")
+
+        self.api_key = api_key or os.getenv("DEEPSEEK_API_KEY") or os.getenv("LLM_API_KEY")
+        # 支持自定义兼容OpenAI的推理服务，默认使用DeepSeek公开端点
+        self.base_url = os.getenv("LLM_BASE_URL") or os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1")
+        self.model = model or os.getenv("DEEPSEEK_MODEL") or os.getenv("MODEL_NAME", "deepseek-chat")
 
         if not self.api_key:
-            raise ValueError("API Key未设置，请设置 LLM_API_KEY 或 IDEALAB_API_KEY 环境变量")
+            raise ValueError("API Key未设置，请设置 LLM_API_KEY 环境变量")
 
-        self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
-        print(f"✅ QuestionGenerator初始化成功 (模型: {self.model})")
-
-        
         try:
             self.client = OpenAI(
                 api_key=self.api_key,
-                base_url="https://idealab.alibaba-inc.com/api/openai/v1",
+                base_url=self.base_url,
             )
             print(f"✅ QuestionGenerator初始化成功 (模型: {self.model})")
         except Exception as e:

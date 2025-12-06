@@ -1,11 +1,12 @@
 import json
 import time
+import os
 from openai import OpenAI
 
 # 配置参数
 api_key = 'd1585aadfbd38ffe09194fe87456f648'
 MODEL_NAME = "gemini-2.5-pro-06-17"
-base_url = "https://idealab.alibaba-inc.com/api/openai/v1"
+base_url = os.getenv("DEEPSEEK_BASE_URL") or os.getenv("LLM_BASE_URL") or "https://api.deepseek.com/v1"
 # 自己改路径/名字
 input_file = "/Users/yjlmacbook/Documents/智多星项目/gemini-0716/第二章模型解答_2.json"
 output_file = "stepmath_gold_output.json"

@@ -128,7 +128,7 @@ class AIQuestionGenerator:
         try:
             self.client = OpenAI(
                 api_key=self.api_key,
-                base_url="https://idealab.alibaba-inc.com/api/openai/v1",
+                base_url=os.getenv("DEEPSEEK_BASE_URL") or os.getenv("LLM_BASE_URL") or "https://api.deepseek.com/v1",
             )
             print("✅ OpenAI客户端已初始化")
         except Exception as e:

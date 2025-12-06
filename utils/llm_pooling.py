@@ -7,17 +7,25 @@ load_dotenv()
 
 #API_LIST = os.getenv('API_LIST','')
 
+
+def _get_base_url(base_url: str | None):
+    return base_url or os.getenv('DEEPSEEK_BASE_URL') or os.getenv('LLM_BASE_URL') or os.getenv('OPENAI_BASE_URL') or "https://api.deepseek.com/v1"
+
+
+def _get_model():
+    return os.getenv('DEEPSEEK_MODEL') or os.getenv('MODEL_NAME') or "deepseek-chat"
+
+
 class Pooling():
-    def __init__(self, API_LIST, BASE_URL):
+    def __init__(self, API_LIST, BASE_URL=None):
         self.api = API_LIST
         self.idx = 0
         self.list_len = len(API_LIST)
-        self.base_url = BASE_URL
+        self.base_url = _get_base_url(BASE_URL)
         self.client = []
 
         for _ in self.api:
             client = OpenAI(
-                # 若没有配置环境变量，请用ideaLAB的API Key将下行替换为：api_key="xxx",
                 api_key=_,
                 base_url=self.base_url,
             )
@@ -25,7 +33,7 @@ class Pooling():
 
     def call_llm_core(self, prompt):
         response = self.client[self.idx].chat.completions.create(
-            model=os.getenv('MODEL_NAME'),
+            model=_get_model(),
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7
         )
@@ -37,7 +45,7 @@ class Pooling():
     def call_llm_stream_core(self, prompt):
         # 设置 stream=True 开启流式响应
         response = self.client[self.idx].chat.completions.create(
-            model=os.getenv('MODEL_NAME'),
+            model=_get_model(),
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7,
             stream=True
@@ -86,8 +94,7 @@ class Pooling():
 
 
 if __name__ == "__main__":
-    base_url = "https://idealab.alibaba-inc.com/api/openai/v1"
-    api_list = ['6863cb01636cb3dac9ef5d3525ae6404']
-    pooling_ideallab = Pooling(API_LIST=api_list, BASE_URL=base_url)
+    api_list = ['your_deepseek_api_key']
+    pooling_deepseek = Pooling(API_LIST=api_list, BASE_URL=os.getenv('DEEPSEEK_BASE_URL'))
 
-    pooling_ideallab.call_llm_stream("请50字介绍原神")
+    pooling_deepseek.call_llm_stream("请50字介绍原神")

@@ -1,21 +1,20 @@
 import os
+from typing import List
+
+import numpy as np
 from openai import OpenAI
 from dotenv import load_dotenv
-
-import dashscope
-from http import HTTPStatus
+from rank_bm25 import BM25Okapi
 
 load_dotenv()
 
 
-# print(os.getenv("DASHSCOPE_API_KEY"))
-
-def get_embedding(texts, dimensions=1024, model_provider="dashscope"):
+def get_embedding(texts, dimensions=1024, model_provider="openai"):
     """
     输入:
         texts: List[str] 待计算embedding的文本列表
         dimensions: int   向量维度
-        model_provider: str 模型提供商，支持 "dashscope", "ollama", "openai"
+        model_provider: str 模型提供商，支持 "ollama", "openai"
     输出:
         List[List[float]]，每个文本的embedding向量
     """
@@ -29,27 +28,16 @@ def get_embedding(texts, dimensions=1024, model_provider="dashscope"):
             model="bge-m3",
             input=texts
         )
-    elif model_provider == "openai":
-        # 使用OpenAI官方API
+    else:  # openai (默认)
+        # 使用OpenAI官方API或其他兼容接口（默认DeepSeek）
         client = OpenAI(
-            api_key=os.getenv("OPENAI_API_KEY")
+            api_key=os.getenv("DEEPSEEK_API_KEY") or os.getenv("LLM_API_KEY") or os.getenv("OPENAI_API_KEY"),
+            base_url=os.getenv("DEEPSEEK_BASE_URL") or os.getenv("LLM_BASE_URL") or os.getenv("OPENAI_BASE_URL") or "https://api.deepseek.com/v1",
         )
         response = client.embeddings.create(
-            model="text-embedding-3-large",
+            model=os.getenv("OPENAI_EMBEDDING_MODEL", os.getenv("DEEPSEEK_EMBEDDING_MODEL", "deepseek-embedding")),
             input=texts,
             dimensions=dimensions
-        )
-    else:  # dashscope (默认)
-        # 使用阿里云DashScope
-        client = OpenAI(
-            api_key=os.getenv("DASHSCOPE_API_KEY"),
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
-        )
-        response = client.embeddings.create(
-            model="text-embedding-v4",
-            input=texts,
-            dimensions=dimensions,
-            encoding_format="float"
         )
 
     # 提取每个embedding
@@ -61,30 +49,43 @@ def get_embedding(texts, dimensions=1024, model_provider="dashscope"):
     return embeddings
 
 
+def _bm25_rerank(question: str, docs: List[str], top_n: int) -> List[str]:
+    tokenized_docs = [doc.split() for doc in docs]
+    bm25 = BM25Okapi(tokenized_docs)
+    scores = bm25.get_scores(question.split())
+    ranked_indices = np.argsort(scores)[::-1][:top_n]
+    return [docs[i] for i in ranked_indices]
+
+
+def _embedding_rerank(question: str, docs: List[str], top_n: int) -> List[str]:
+    texts = [question] + docs
+    embeddings = get_embedding(texts, model_provider="openai")
+    query_vec, doc_vecs = embeddings[0], embeddings[1:]
+    query_norm = np.linalg.norm(query_vec)
+    doc_norms = np.linalg.norm(doc_vecs, axis=1)
+    similarities = np.dot(doc_vecs, query_vec) / (doc_norms * query_norm + 1e-8)
+    ranked_indices = np.argsort(similarities)[::-1][:top_n]
+    return [docs[i] for i in ranked_indices]
+
+
 def rerank(question, docs, top_n):
     """
-    计算top k docs相对于question的相关性分数，然后按分数排序，返回top n个文档文本
+    计算top k docs相对于question的相关性分数，然后按分数排序，返回top n个文档文本。
+    优先使用本地BM25排序，不依赖专有服务，必要时再退回到 embedding 相似度。
 
     :param question: str，问题
     :param docs: List[str]，待排序的候选文档
     :param top_n: int，返回前top_n个
     :return: reranked_docs: List[str]，按分数降序排序的文本列表
     """
-    resp = dashscope.TextReRank.call(
-        api_key=os.getenv("DASHSCOPE_API_KEY"),
-        model="gte-rerank-v2",
-        query=question,
-        documents=docs,
-        top_n=top_n,  # API会返回分最高的top_n个
-        return_documents=True
-    )
-    if resp.status_code == HTTPStatus.OK:
-        # 结果已经按照相关性排序
-        reranked_docs = [item['document']['text'] for item in resp['output']['results']]
-    else:
-        # 出错时可自定义异常/降级处理，这里简单返回原文档
-        reranked_docs = docs[:top_n]
-    return reranked_docs
+    try:
+        return _bm25_rerank(question, docs, top_n)
+    except Exception:
+        # 当BM25不可用时，退化到embedding相似度排序
+        try:
+            return _embedding_rerank(question, docs, top_n)
+        except Exception:
+            return docs[:top_n]
 
 
 # 示例用法
@@ -100,8 +101,7 @@ if __name__ == "__main__":
     # 测试不同的embedding提供商
     providers_to_test = [
         ("ollama", "本地BGE-M3"),
-        ("dashscope", "阿里云DashScope"),
-        # ("openai", "OpenAI官方")  # 需要OPENAI_API_KEY
+        ("openai", "OpenAI官方/兼容接口"),
     ]
 
     for provider, description in providers_to_test:
@@ -116,18 +116,14 @@ if __name__ == "__main__":
             print(f"❌ {description}测试失败: {e}")
     print("\nrerank test====================")
 
-    # 只在有API key时测试rerank
-    if os.getenv("DASHSCOPE_API_KEY"):
-        question = "什么是文本排序模型"
-        docs = [
-            "文本排序模型广泛用于搜索引擎和推荐系统中，它们根据文本相关性对候选文本进行排序",
-            "量子计算是计算科学的一个前沿领域",
-            "预训练语言模型的发展给文本排序模型带来了新的进展"
-        ]
-        try:
-            result = rerank(question, docs, 2)
-            print(f"Rerank结果: {result}")
-        except Exception as e:
-            print(f"❌ Rerank测试失败: {e}")
-    else:
-        print("⚠️ 跳过rerank测试 - 未设置DASHSCOPE_API_KEY")
+    question = "什么是文本排序模型"
+    docs = [
+        "文本排序模型广泛用于搜索引擎和推荐系统中，它们根据文本相关性对候选文本进行排序",
+        "量子计算是计算科学的一个前沿领域",
+        "预训练语言模型的发展给文本排序模型带来了新的进展"
+    ]
+    try:
+        result = rerank(question, docs, 2)
+        print(f"Rerank结果: {result}")
+    except Exception as e:
+        print(f"❌ Rerank测试失败: {e}")

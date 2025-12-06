@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { User, Mail, Calendar, Award, TrendingUp, Settings, Edit2, Save, Camera, Upload } from 'lucide-react';
 
-const DEFAULT_AVATAR = 'https://oneday-react-native.oss-cn-zhangjiakou.aliyuncs.com/oneday/source/f8c3d4a4-26de-4487-944d-1132784c6994.png';
+const DEFAULT_AVATAR = 'https://avatars.githubusercontent.com/u/9919?s=200&v=4';
 
 const Profile = () => {
   const [editing, setEditing] = useState(false);

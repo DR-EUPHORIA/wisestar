@@ -15,7 +15,5 @@ batchrun.py：按顺序解答指定数据集中的题目，并与题目答案进
 
 后端Agent使用:
 
-1. 在.env文件中设置IDEALAB_API_KEY为自己的key,
-   获取网站:https://idealab.alibaba-inc.com/ideaTalk#/aistudio/manage/personalResource;  
-   设置MODEL_NAME=qwen2.5-max,或者其他idealLAB上提供的模型:https://idealab-models.io.alibaba-inc.com/;
+1. 在`.env`文件中设置 `DEEPSEEK_API_KEY`（或 `LLM_API_KEY`）为自己的 DeepSeek Key，`DEEPSEEK_BASE_URL=https://api.deepseek.com/v1`，`MODEL_NAME`/`DEEPSEEK_MODEL=deepseek-chat`。
 2. 可直接在flow.py下进行整体流程测试

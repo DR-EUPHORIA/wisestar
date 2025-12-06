@@ -7,7 +7,6 @@ pocketflow
 asyncio
 PyPDF2
 faiss-cpu
-dashscope
 pdf2image
 pytesseract
 pillow
@@ -16,5 +15,4 @@ rank_bm25
 jieba
 pypdf
 aiohttp
-asyncio
 aiofiles

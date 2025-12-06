@@ -3,15 +3,29 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
+
+
+def _get_api_key():
+    return os.getenv('DEEPSEEK_API_KEY') or os.getenv('LLM_API_KEY') or os.getenv('OPENAI_API_KEY')
+
+
+def _get_base_url():
+    return os.getenv('DEEPSEEK_BASE_URL') or os.getenv('LLM_BASE_URL') or os.getenv('OPENAI_BASE_URL') or "https://api.deepseek.com/v1"
+
+
+def _get_model():
+    return os.getenv('DEEPSEEK_MODEL') or os.getenv('MODEL_NAME') or "deepseek-chat"
+
+
 def call_llm_stream(prompt):
     client = OpenAI(
-        api_key=os.getenv('IDEALAB_API_KEY'),
-        base_url="https://idealab.alibaba-inc.com/api/openai/v1",
+        api_key=_get_api_key(),
+        base_url=_get_base_url(),
     )
 
     # 设置 stream=True 开启流式响应
     response = client.chat.completions.create(
-        model=os.getenv('MODEL_NAME'),
+        model=_get_model(),
         messages=[{"role": "user", "content": prompt}],
         temperature=0.7,
         stream=True
@@ -30,8 +44,8 @@ def call_llm_stream(prompt):
 
 def call_llm_stream_img(prompt: str, url: str):
     client = OpenAI(
-        api_key=os.getenv("IDEALAB_API_KEY"),
-        base_url="https://idealab.alibaba-inc.com/api/openai/v1",
+        api_key=_get_api_key(),
+        base_url=_get_base_url(),
     )
 
     # 正确的 messages 结构
@@ -53,7 +67,7 @@ def call_llm_stream_img(prompt: str, url: str):
 
     try:
         response = client.chat.completions.create(
-            model=os.getenv("MODEL_NAME"),
+            model=_get_model(),
             messages=messages,
             temperature=0.7,
             stream=True

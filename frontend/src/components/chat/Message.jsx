@@ -3,7 +3,7 @@ import { User, Bot, CheckCircle, XCircle, Loader, Brain, Code, TrendingUp, FileT
 import MarkdownRenderer from '../MarkdownRenderer';
 import MessageActions from './MessageActions';
 
-const DEFAULT_AVATAR = 'https://oneday-react-native.oss-cn-zhangjiakou.aliyuncs.com/oneday/source/f8c3d4a4-26de-4487-944d-1132784c6994.png';
+const DEFAULT_AVATAR = 'https://avatars.githubusercontent.com/u/9919?s=200&v=4';
 
 const Message = ({ message }) => {
   const isUser = message.role === 'user';
