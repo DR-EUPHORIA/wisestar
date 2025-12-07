@@ -1,6 +1,9 @@
 // Frontend <-> Backend base URL. Use Vite env when available, otherwise
 // fall back to the local FastAPI default.
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+// lizhuo
+// const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = "http://localhost:8000";
+
 
 export const solveProblem = async (question) => {
   try {
