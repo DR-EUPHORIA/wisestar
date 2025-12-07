@@ -10,6 +10,4 @@ TOP_N = 3
 CHUNK_SIZE_K = 5
 
 # 嵌入模型配置
-EMBEDDING_PROVIDER = "ollama"  # 支持 "ollama", "dashscope", "openai"
-# EMBEDDING_PROVIDER = "dashscope"  # 使用阿里云DashScope (需要DASHSCOPE_API_KEY)
-# EMBEDDING_PROVIDER = "openai"     # 使用OpenAI (需要OPENAI_API_KEY)
+EMBEDDING_PROVIDER = "openai"  # 支持 "ollama"、"openai" 等 OpenAI 兼容接口，默认使用 DeepSeek 兼容端点

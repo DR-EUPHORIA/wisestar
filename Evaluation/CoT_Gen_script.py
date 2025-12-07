@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
     client = OpenAI(
         api_key=api_key,
-        base_url="https://idealab.alibaba-inc.com/api/openai/v1"
+        base_url=os.getenv("DEEPSEEK_BASE_URL") or os.getenv("LLM_BASE_URL") or "https://api.deepseek.com/v1"
     )
 #max_worker为并发数，可自行设置。默认2
     with ThreadPoolExecutor(max_workers=2) as executor:

@@ -62,6 +62,7 @@ except ImportError:
 
 # OpenAI导入
 from openai import OpenAI, APIError
+from utils.openai_client import build_openai_client
 
 # 加载环境变量
 load_dotenv()
@@ -126,9 +127,9 @@ class AIQuestionGenerator:
         self.model = model or 'MODEL_NAME'
 
         try:
-            self.client = OpenAI(
+            self.client = build_openai_client(
                 api_key=self.api_key,
-                base_url="https://idealab.alibaba-inc.com/api/openai/v1",
+                base_url=os.getenv("DEEPSEEK_BASE_URL") or os.getenv("LLM_BASE_URL") or "https://api.deepseek.com/v1",
             )
             print("✅ OpenAI客户端已初始化")
         except Exception as e:

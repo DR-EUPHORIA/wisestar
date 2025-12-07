@@ -17,11 +17,11 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-编辑 `.env` 文件：
+编辑 `.env` 文件（默认基于公共可用的 DeepSeek 端点，如网络受限可替换为镜像或代理）：
 ```
-LLM_API_KEY=your_actual_api_key
-LLM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
-LLM_MODEL=qwen-max
+LLM_API_KEY=your_deepseek_api_key
+LLM_BASE_URL=https://api.deepseek.com/v1
+LLM_MODEL=deepseek-chat
 ```
 
 ### 3. 启动服务
@@ -29,6 +29,8 @@ LLM_MODEL=qwen-max
 ```bash
 python app.py
 ```
+
+> 如果你在仓库根目录执行，可直接运行 `python backend/app.py`；请确保命令的工作目录包含 `app.py` 文件，否则会出现 “can't open file '.../app.py'” 的路径错误。
 
 服务将在 `http://localhost:8000` 启动
 

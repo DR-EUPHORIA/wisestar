@@ -3,6 +3,8 @@ import os
 from dotenv import load_dotenv
 from openai import OpenAI  # 注意：这里我们导入 OpenAI 库
 
+from utils.openai_client import build_openai_client
+
 # 从 .env 文件加载环境变量
 load_dotenv()
 
@@ -18,7 +20,7 @@ def call_xai_grok_stream(prompt: str) -> str:
     """
     try:
         # --- 关键修改：初始化客户端以指向 xAI API ---
-        client = OpenAI(
+        client = build_openai_client(
             # 1. 指定 xAI 的 API 端点
             base_url="https://api.x.ai/v1",
             # 2. 从环境变量读取你的 xAI API 密钥

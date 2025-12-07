@@ -1,41 +1,33 @@
 import React, { useState } from 'react';
-import { Calculator, Send, Loader, CheckCircle, XCircle, Code, Brain } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
+import { Calculator, Send, Loader, CheckCircle, XCircle, Code, Brain, AlertCircle } from 'lucide-react';
+import { solveProblem } from '../utils/api';
 
 const SolveProblem = () => {
   const [question, setQuestion] = useState('');
   const [solving, setSolving] = useState(false);
   const [result, setResult] = useState(null);
   const [showSteps, setShowSteps] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSolve = async () => {
     if (!question.trim()) return;
-    
+
     setSolving(true);
     setResult(null);
-    
-    // 模拟API调用
-    setTimeout(() => {
+    setError('');
+
+    try {
+      const response = await solveProblem(question.trim());
       setResult({
-        success: true,
-        answer: '公比 q = 2',
-        steps: [
-          { type: 'reasoning', content: '设等比数列首项为a₁，公比为q' },
-          { type: 'calculation', content: 'S₄ = a₁(1-q⁴)/(1-q) = 4', code: 'a1 * (1 - q**4) / (1 - q) = 4' },
-          { type: 'calculation', content: 'S₈ = a₁(1-q⁸)/(1-q) = 68', code: 'a1 * (1 - q**8) / (1 - q) = 68' },
-          { type: 'reasoning', content: '两式相除得：(1-q⁸)/(1-q⁴) = 17' },
-          { type: 'calculation', content: '化简得：1+q⁴ = 17，所以 q⁴ = 16', code: 'q**4 = 16' },
-          { type: 'calculation', content: '解得 q = 2（取正值）', code: 'q = 2' }
-        ],
-        statistics: {
-          total_steps: 6,
-          reasoning_steps: 3,
-          calculation_steps: 3,
-          time_used: '2.3s'
-        }
+        ...response,
+        steps: response?.steps || [],
+        statistics: response?.statistics || {}
       });
+    } catch (err) {
+      setError(err.message || '解题失败，请稍后重试');
+    } finally {
       setSolving(false);
-    }, 2000);
+    }
   };
 
   const exampleQuestions = [
@@ -104,6 +96,13 @@ const SolveProblem = () => {
             </>
           )}
         </button>
+
+        {error && (
+          <div className="mt-3 flex items-center text-sm text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2">
+            <AlertCircle className="w-4 h-4 mr-2" />
+            {error}
+          </div>
+        )}
       </div>
 
       {/* 结果区域 */}

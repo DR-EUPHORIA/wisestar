@@ -1,13 +1,25 @@
 import json
+import os
 import time
+
+import httpx
 from openai import OpenAI
 from config import config
+
+
+def _build_http_client():
+    proxy = os.getenv("OPENAI_PROXY") or os.getenv("HTTPS_PROXY") or os.getenv("HTTP_PROXY") or os.getenv("ALL_PROXY")
+    transport = httpx.HTTPTransport(retries=config.MAX_RETRIES)
+    if proxy:
+        return httpx.Client(proxies=proxy, transport=transport, timeout=config.TIMEOUT)
+    return httpx.Client(transport=transport, timeout=config.TIMEOUT)
 
 class LLMClient:
     def __init__(self):
         self.client = OpenAI(
             api_key=config.LLM_API_KEY,
-            base_url=config.LLM_BASE_URL
+            base_url=config.LLM_BASE_URL,
+            http_client=_build_http_client(),
         )
         self.model = config.LLM_MODEL
     

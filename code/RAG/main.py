@@ -264,9 +264,9 @@ if __name__ == "__main__":
     ]
     
     llm = OpenAILike(
-        model=os.getenv('MODEL_NAME'),
-        api_base="https://idealab.alibaba-inc.com/api/openai/v1",
-        api_key=os.getenv('IDEALAB_API_KEY'),
+        model=os.getenv('DEEPSEEK_MODEL') or os.getenv('MODEL_NAME'),
+        api_base=os.getenv('DEEPSEEK_BASE_URL') or os.getenv('LLM_BASE_URL') or "https://api.deepseek.com/v1",
+        api_key=os.getenv('DEEPSEEK_API_KEY') or os.getenv('LLM_API_KEY'),
         context_window=3900,
         is_chat_model=True,
         is_function_calling_model=False,
@@ -275,9 +275,9 @@ if __name__ == "__main__":
     # Use at Your Own Risk: raptor calls embedding model for tons of times during indexing, 
     # which significantly exceeds your Maximum TPM.
     embed_model = OpenAILikeEmbedding(
-        model_name=os.getenv('EMBED_NAME'),
-        api_base="https://idealab.alibaba-inc.com/api/openai/v1",
-        api_key=os.getenv('IDEALAB_API_KEY'),
+        model_name=os.getenv('DEEPSEEK_EMBEDDING_MODEL') or os.getenv('EMBED_NAME'),
+        api_base=os.getenv('DEEPSEEK_BASE_URL') or os.getenv('LLM_BASE_URL') or "https://api.deepseek.com/v1",
+        api_key=os.getenv('DEEPSEEK_API_KEY') or os.getenv('LLM_API_KEY'),
         additional_kwargs={
             "encoding_format": "float", # qwen embedding required such param.
         }

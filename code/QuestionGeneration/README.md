@@ -119,18 +119,19 @@ python -m code.QuestionGeneration.main
 
 ```bash
 # .env 文件
-IDEALAB_API_KEY=your_api_key_here
-MODEL_NAME=qwen2.5-max
+LLM_API_KEY=your_deepseek_api_key
+LLM_BASE_URL=https://api.deepseek.com/v1
+MODEL_NAME=deepseek-chat
 MAX_RETRY=3
 ```
 
 ### 模型配置
 
-默认使用阿里云IdeaLab平台的Qwen系列模型，可在代码中修改：
+默认使用兼容OpenAI接口的 DeepSeek 公共模型，可在代码中修改：
 
 ```python
 # 在 generator.py 中修改
-self.model = "qwen2.5-max"  # 或其他支持的模型
+self.model = "deepseek-chat"  # 或其他支持的模型
 ```
 
 ## 📚 模块详解

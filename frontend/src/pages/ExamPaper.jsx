@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { FileText, ChevronDown, ChevronRight, Plus, Minus, Download, Wand2, Loader } from 'lucide-react';
+import React, { useMemo, useState } from 'react';
+import { FileText, ChevronDown, ChevronRight, Plus, Minus, Download, Wand2, Loader, AlertCircle } from 'lucide-react';
 import { knowledgeTreePresets } from '../data/knowledgeTree';
+import { generateQuestion } from '../utils/api';
 
 const ExamPaper = () => {
   const [selectedVersion, setSelectedVersion] = useState('人教A版');
@@ -23,8 +24,23 @@ const ExamPaper = () => {
 
   const [generating, setGenerating] = useState(false);
   const [generatedPaper, setGeneratedPaper] = useState(null);
+  const [error, setError] = useState('');
 
   const currentTree = knowledgeTreePresets[selectedVersion];
+
+  const selectedChapterNames = useMemo(() => {
+    const names = [];
+    const walk = (nodes = []) => {
+      nodes.forEach((node) => {
+        if (selectedChapters.has(node.id)) {
+          names.push(node.name);
+        }
+        if (node.children) walk(node.children);
+      });
+    };
+    walk(currentTree?.children || []);
+    return names;
+  }, [currentTree, selectedChapters]);
 
   const toggleNode = (nodeId) => {
     setExpandedNodes(prev => {
@@ -72,86 +88,46 @@ const ExamPaper = () => {
     }
 
     setGenerating(true);
-    
-    setTimeout(() => {
+    setError('');
+
+    const basePayload = {
+      difficulty_level: examConfig.difficulty,
+      problem_type: '综合',
+      topic_keywords: selectedChapterNames,
+      requirements: `${selectedVersion} ${examConfig.scenario} ${examConfig.region}`
+    };
+
+    const generationTasks = [];
+    Object.entries(questionTypes).forEach(([type, count]) => {
+      for (let i = 0; i < count; i++) {
+        generationTasks.push({ type, call: generateQuestion(basePayload) });
+      }
+    });
+
+    try {
+      const responses = await Promise.all(generationTasks.map(task => task.call));
+      let questionNumber = 1;
+      const questions = responses.map((res, idx) => ({
+        type: generationTasks[idx].type,
+        number: questionNumber++,
+        content: res.problem || res.question || '生成结果为空',
+        answer: res.validation?.answer || res.answer || '',
+        score: 5,
+        options: undefined
+      }));
+
       setGeneratedPaper({
-        title: '高中数学测试卷',
+        title: '智能组卷',
         subtitle: `${selectedVersion} - ${examConfig.scenario === 'practice' ? '课时练习' : examConfig.scenario === 'test' ? '阶段测试' : '高考备考'}`,
-        totalScore: getTotalQuestions() * 5,
+        totalScore: questions.length * 5,
         duration: 120,
-        questions: generateMockQuestions()
+        questions
       });
+    } catch (err) {
+      setError(err.message || '组卷失败，请稍后重试');
+    } finally {
       setGenerating(false);
-    }, 2000);
-  };
-
-  const generateMockQuestions = () => {
-    const questions = [];
-    let questionNumber = 1;
-
-    if (questionTypes.single > 0) {
-      for (let i = 0; i < questionTypes.single; i++) {
-        questions.push({
-          type: 'single',
-          number: questionNumber++,
-          content: `若集合 A = {x | x² - 3x + 2 = 0}，B = {1, 2, 3}，则 A ∩ B = ？`,
-          options: ['A. {1}', 'B. {2}', 'C. {1, 2}', 'D. {1, 2, 3}'],
-          answer: 'C',
-          score: 5
-        });
-      }
     }
-
-    if (questionTypes.multiple > 0) {
-      for (let i = 0; i < questionTypes.multiple; i++) {
-        questions.push({
-          type: 'multiple',
-          number: questionNumber++,
-          content: `下列函数中，既是奇函数又在定义域上单调递增的是（）`,
-          options: ['A. y = x', 'B. y = x³', 'C. y = sin x', 'D. y = |x|'],
-          answer: 'AB',
-          score: 5
-        });
-      }
-    }
-
-    if (questionTypes.fillBlank > 0) {
-      for (let i = 0; i < questionTypes.fillBlank; i++) {
-        questions.push({
-          type: 'fillBlank',
-          number: questionNumber++,
-          content: `若 sin α = 3/5，α ∈ (π/2, π)，则 cos α = ______。`,
-          answer: '-4/5',
-          score: 5
-        });
-      }
-    }
-
-    if (questionTypes.answer > 0) {
-      for (let i = 0; i < questionTypes.answer; i++) {
-        questions.push({
-          type: 'answer',
-          number: questionNumber++,
-          content: `已知函数 f(x) = x³ - 3x + 1。\n(1) 求函数 f(x) 的单调区间；\n(2) 求函数 f(x) 在区间 [-2, 2] 上的最大值和最小值。`,
-          answer: '(1) 单调递增区间：(-∞, -1) ∪ (1, +∞)，单调递减区间：(-1, 1)\n(2) 最大值为 3，最小值为 -1',
-          score: 12
-        });
-      }
-    }
-
-    if (questionTypes.judge > 0) {
-      for (let i = 0; i < questionTypes.judge; i++) {
-        questions.push({
-          type: 'judge',
-          number: questionNumber++,
-          content: `空集是任何集合的子集。`,
-          answer: '正确',
-          score: 3
-        });
-      }
-    }
-
-    return questions;
   };
 
   const exportPaper = (withAnswers = false) => {
@@ -422,20 +398,27 @@ const ExamPaper = () => {
               disabled={generating || selectedChapters.size === 0 || getTotalQuestions() === 0}
               className="btn-primary w-full py-4 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {generating ? (
-                <>
-                  <Loader className="w-6 h-6 mr-2 animate-spin inline" />
-                  生成中...
-                </>
+            {generating ? (
+              <>
+                <Loader className="w-6 h-6 mr-2 animate-spin inline" />
+                生成中...
+              </>
               ) : (
                 <>
                   <Wand2 className="w-6 h-6 mr-2 inline" />
                   生成试卷
-                </>
-              )}
-            </button>
+              </>
+            )}
+          </button>
 
-            {generatedPaper && (
+          {error && (
+            <div className="mt-3 flex items-center text-sm text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2">
+              <AlertCircle className="w-4 h-4 mr-2" />
+              {error}
+            </div>
+          )}
+
+          {generatedPaper && (
               <div className="card-elevated animate-slide-up">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-xl font-bold text-slate-900">生成结果</h2>

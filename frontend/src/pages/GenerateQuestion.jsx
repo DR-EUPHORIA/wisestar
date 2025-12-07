@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FileText, Wand2, Loader, Download, Copy, CheckCircle, Plus, Trash2, Layers } from 'lucide-react';
+import { FileText, Wand2, Loader, Download, Copy, CheckCircle, Plus, Trash2, Layers, AlertCircle } from 'lucide-react';
+import { generateQuestion } from '../utils/api';
 
 const GenerateQuestion = () => {
   const [mode, setMode] = useState('single');
@@ -14,6 +15,7 @@ const GenerateQuestion = () => {
   const [generating, setGenerating] = useState(false);
   const [results, setResults] = useState([]);
   const [copied, setCopied] = useState(false);
+  const [error, setError] = useState('');
 
   const problemTypesSuggestions = [
     '函数与导数', '数列', '不等式', '三角函数', '立体几何', 
@@ -26,35 +28,47 @@ const GenerateQuestion = () => {
 
   const handleGenerate = async () => {
     if (!config.task_scenario.trim()) return;
-    
+
     setGenerating(true);
     setResults([]);
-    
+    setError('');
+
     const count = mode === 'batch' ? config.batch_count : 1;
-    
-    setTimeout(() => {
-      const newResults = Array.from({ length: count }, (_, i) => ({
+
+    const payload = {
+      difficulty_level: config.difficulty_level || '中等',
+      problem_type: config.problem_type || '综合',
+      topic_keywords: config.topic_keywords
+        ? config.topic_keywords.split(',').map(k => k.trim()).filter(Boolean)
+        : [],
+      requirements: `${config.task_scenario}${config.requirements ? `\n${config.requirements}` : ''}`
+    };
+
+    try {
+      const calls = Array.from({ length: count }, () => generateQuestion(payload));
+      const responses = await Promise.all(calls);
+      const newResults = responses.map((res, i) => ({
         id: Date.now() + i,
-        success: true,
-        problem: `已知函数 f(x) = x³ - 3ax + b，其中 a, b ∈ ℝ。\n\n(1) 讨论函数 f(x) 的单调性；\n\n(2) 若 f(x) 在 x = 1 处取得极值 2，求 a, b 的值；\n\n(3) 在(2)的条件下，求 f(x) 在区间 [-2, 2] 上的最大值和最小值。`,
-        latex: '\\documentclass{article}\n\\usepackage{amsmath}\n\\begin{document}\n已知函数 $f(x) = x^3 - 3ax + b$...\n\\end{document}',
-        evaluation: {
-          overall_score: 8.5 + Math.random() * 0.5,
-          originality_score: 9.0,
-          solvability_score: 8.0,
-          complexity_score: 8.5,
-          knowledge_coverage_score: 8.0,
-          educational_value_score: 9.0
+        success: res.success !== false,
+        problem: res.problem || res.question || '生成结果为空',
+        latex: res.latex || '',
+        evaluation: res.evaluation || {
+          overall_score: 0,
+          originality_score: 0,
+          solvability_score: 0,
+          complexity_score: 0,
+          knowledge_coverage_score: 0,
+          educational_value_score: 0
         },
-        validation: {
-          success: true,
-          answer: 'a = 1, b = 4; 最大值为 6，最小值为 -2'
-        },
-        iterations: 2
+        validation: res.validation || { success: true, answer: res.answer || '' },
+        iterations: res.iterations || 1
       }));
       setResults(newResults);
+    } catch (err) {
+      setError(err.message || '生成失败，请稍后重试');
+    } finally {
       setGenerating(false);
-    }, 3000);
+    }
   };
 
   const handleCopy = (text) => {
@@ -260,6 +274,13 @@ const GenerateQuestion = () => {
             </button>
           )}
         </div>
+
+        {error && (
+          <div className="mt-3 flex items-center text-sm text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2">
+            <AlertCircle className="w-4 h-4 mr-2" />
+            {error}
+          </div>
+        )}
       </div>
 
       {results.length > 0 && (
