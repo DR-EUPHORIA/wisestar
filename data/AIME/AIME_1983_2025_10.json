@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1999-9",
+    "question": "A function $f$ is defined on the complex numbers by $f(z)=(a+bi)z,$ where $a_{}$ and $b_{}$ are positive numbers.  This function has the property that the image of each point in the complex plane is equidistant from that point and the origin.  Given that $|a+bi|=8$ and that $b^2=m/n,$ where $m_{}$ and $n_{}$ are relatively prime positive integers.  Find $m+n.$",
+    "answer": "259"
+  },
+  {
+    "id": "1997-7",
+    "question": "A car travels due east at $\\frac 23$ miles per minute on a long, straight road. At the same time, a circular storm, whose radius is $51$ miles, moves southeast at $\\frac 12\\sqrt{2}$ miles per minute. At time $t=0$ , the center of the storm is $110$ miles due north of the car. At time $t=t_1$ minutes, the car enters the storm circle, and at time $t=t_2$ minutes, the car leaves the storm circle. Find $\\frac 12(t_1+t_2)$ .",
+    "answer": "198"
+  },
+  {
+    "id": "2013-I-13",
+    "question": "Triangle $AB_0C_0$ has side lengths $AB_0 = 12$ , $B_0C_0 = 17$ , and $C_0A = 25$ . For each positive integer $n$ , points $B_n$ and $C_n$ are located on $\\overline{AB_{n-1}}$ and $\\overline{AC_{n-1}}$ , respectively, creating three similar triangles $\\triangle AB_nC_n \\sim \\triangle B_{n-1}C_nC_{n-1} \\sim \\triangle AB_{n-1}C_{n-1}$ . The area of the union of all triangles $B_{n-1}C_nB_n$ for $n\\geq1$ can be expressed as $\\tfrac pq$ , where $p$ and $q$ are relatively prime positive integers. Find $q$ .",
+    "answer": "961"
+  },
+  {
+    "id": "2012-I-10",
+    "question": "Let $\\mathcal{S}$ be the set of all perfect squares whose rightmost three digits in base $10$ are $256$ . Let $\\mathcal{T}$ be the set of all numbers of the form $\\frac{x-256}{1000}$ , where $x$ is in $\\mathcal{S}$ . In other words, $\\mathcal{T}$ is the set of numbers that result when the last three digits of each number in $\\mathcal{S}$ are truncated. Find the remainder when the tenth smallest element of $\\mathcal{T}$ is divided by $1000$ .",
+    "answer": "170"
+  },
+  {
+    "id": "2000-I-6",
+    "question": "For how many ordered pairs $(x,y)$ of integers is it true that $0 < x < y < 10^{6}$ and that the arithmetic mean of $x$ and $y$ is exactly $2$ more than the geometric mean of $x$ and $y$ ?",
+    "answer": "997"
+  },
+  {
+    "id": "2004-I-6",
+    "question": "An integer is called snakelike if its decimal representation $a_1a_2a_3\\cdots a_k$ satisfies $a_i<a_{i+1}$ if $i$ is odd and $a_i>a_{i+1}$ if $i$ is even. How many snakelike integers between 1000 and 9999 have four distinct digits?",
+    "answer": "882"
+  },
+  {
+    "id": "2024-II-2",
+    "question": "A list of positive integers has the following properties: $\\bullet$ The sum of the items in the list is $30$ . $\\bullet$ The unique mode of the list is $9$ . $\\bullet$ The median of the list is a positive integer that does not appear in the list itself. Find the sum of the squares of all the items in the list.",
+    "answer": "236"
+  },
+  {
+    "id": "2011-I-11",
+    "question": "Let $R$ be the set of all possible remainders when a number of the form $2^n$ , $n$ a nonnegative integer, is divided by 1000. Let $S$ be the sum of the elements in $R$ . Find the remainder when $S$ is divided by 1000.",
+    "answer": "7"
+  },
+  {
+    "id": "2005-II-3",
+    "question": "An infinite geometric series has sum 2005. A new series, obtained by squaring each term of the original series, has 10 times the sum of the original series. The common ratio of the original series is $\\frac mn$ where $m$ and $n$ are relatively prime integers. Find $m+n.$",
+    "answer": "802"
+  },
+  {
+    "id": "1984-13",
+    "question": "Find the value of $10\\cot(\\cot^{-1}3+\\cot^{-1}7+\\cot^{-1}13+\\cot^{-1}21).$",
+    "answer": "15"
+  }
+]

@@ -1,0 +1,802 @@
+[
+    {
+        "type":"xingaokao1",
+        "id":1,
+        "question（纯文本）":"$(1+5 \\mathrm{i}) \\mathrm{i}$ 的虚部为\nA．-1\nB． 0\nC． 1\nD． 6",
+        "question type":"objective question",
+        "ground_truth":"C",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao1",
+        "id":2,
+        "question（纯文本）":"设全集 $U=\\{x \\mid x$ 是小于 9 的正整数 $\\}$ ，集合 $A=\\{1,3,5\\}$ ，则 $\\complement_{U} A$ 中元素个数为\nA． 2\nB． 3\nC． 5\nD． 8",
+        "question type":"objective question",
+        "ground_truth":"C",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao1",
+        "id":3,
+        "question（纯文本）":"若双曲线 $C$ 的虚轴长为实轴长的 $\\sqrt{7}$ 倍，则 $C$ 的离心率为\nA．$\\sqrt{2}$\nB． 2\nC．$\\sqrt{7}$\nD． $2 \\sqrt{2}$",
+        "question type":"objective question",
+        "ground_truth":"D",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao1",
+        "id":4,
+        "question（纯文本）":"若点 $(a, 0)(a>0)$ 是函数 $y=2 \\tan \\left(x-\\frac{\\pi}{3}\\right)$ 的图象的一个对称中心，则 $a$ 的最小值为\nA．$\\frac{\\pi}{4}$\nB．$\\frac{\\pi}{2}$\nC．$\\frac{\\pi}{3}$\nD．$\\frac{4 \\pi}{3}$",
+        "question type":"objective question",
+        "ground_truth":"C",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao1",
+        "id":5,
+        "question（纯文本）":"设 $f(x)$ 是定义在 $R$ 上且周期为 2 的偶函数，当 $2 \\leqslant x \\leqslant 3$ 时，$f(x)=5-2 x$ ，则 $f\\left(-\\frac{3}{4}\\right)=$\nA．$-\\frac{1}{2}$\nB．$-\\frac{1}{4}$\nC．$\\frac{1}{4}$\nD．$\\frac{1}{2}$",
+        "question type":"objective question",
+        "ground_truth":"A",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao1",
+        "id":6,
+        "question（纯文本）":"帆船比赛中，运动员可借助风力计测定风速的大小和方向，测出的结果在航海学中称为视风风速，视风风速对应的向量，是真风风速对应的向量与船行风速对应的向量之和，其中船行风速对应的向量与船速对应的向量大小相等，方向相反。图1给出了部分风力等级、名称与风速大小的对应关系。已知某帆船运动员在某时刻测得的视风风速对应的向量与船速对应的向量如图2（风速的大小和向量的大小相同，单位 $(\\mathrm{m} \/ \\mathrm{s})$ ，则真风为 \n\\begin{tabular}{|c|c|c|}\n\\hline 等级 & 风速大小 $\\mathrm{m} \/ \\mathrm{s}$ & 名称 \\\\\n\\hline 2 & $1.1 \\sim 3.3$ & 轻风 \\\\\n\\hline 3 & $3.4 \\sim 5.4$ & 微风 \\\\\n\\hline 4 & $5.5 \\sim 7.9$ & 和风 \\\\\n\\hline 5 & $8.0 \\sim 10.1$ & 劲风 \\\\\n\\hline\n\\end{tabular}\nA．轻风\nB．微风\nC．和风\nD．劲风",
+        "question type":"objective question",
+        "ground_truth":"A",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao1",
+        "id":7,
+        "question（纯文本）":"若圆 $x^{2}+(y+2)^{2}=r^{2}(r>0)$ 上到直线 $y=\\sqrt{3} x+2$ 的距离为 1 的点有且仅有 2 个，则 $r$ 的取值范围是\n\nA．$(0,1)$\nB．$(1,3)$\nC．$(3,+\\infty)$\nD．$(0,+\\infty)$",
+        "question type":"objective question",
+        "ground_truth":"B",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao1",
+        "id":8,
+        "question（纯文本）":"若实数 $x, y, z$ 满足 $2+\\log _{2} x=3+\\log _{3} y=5+\\log _{5} z$ ，则 $x, y, z$ 的大小关系不可能是 \nA．$x>y>z$\nB．$x>z>y$\nC．$y>x>z$\nD．$y>z>x$",
+        "question type":"objective question",
+        "ground_truth":"B",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao1",
+        "id":9,
+        "question（纯文本）":"在正三棱柱 $A B C-A_{1} B_{1} C_{1}$ 中，$D$ 为 $B C$ 中点，则\nA．$A D \\perp A_{1} C$\nB．$B_{1} C \\perp$ 平面 $A A_{1} D$\nC．$C C_{1} \/ \/$ 平面 $A A_{1} D$\nD．$A D \/ \/ A_{1} B_{1}$",
+        "question type":"objective question",
+        "ground_truth":"BD",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao1",
+        "id":10,
+        "question（纯文本）":"设抛物线 $C: y^{2}=6 x$ 的焦点为 $F$ ，过 $F$ 的直线交 $C$ 于 $A 、 B$ ，过 $F$ 且垂直于 $A B$ 的直线交准线 $l: x=-\\frac{3}{2}$ 于 $E$ ，过点 $A$ 作准线 $l$ 的垂线，垂足为 $D$ ，则 \nA．$|A D|=|A F|$\nB．$|A E|=|A B|$\nC．$|A B| \\geqslant 6$\nD．$|A E| \\cdot|B E| \\geqslant 18$",
+        "question type":"objective question",
+        "ground_truth":"ACD",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao1",
+        "id":11,
+        "question（纯文本）":"已知 $\\triangle A B C$ 的面积为 $\\frac{1}{4}$ ，若 $\\cos 2 A+\\cos 2 B+2 \\sin C=2, \\cos A \\cos B \\sin C=\\frac{1}{4}$ ，则 \nA． $\\sin C=\\sin ^{2} A+\\sin ^{2} B$\nB．$A B=\\sqrt{2}$\nC． $\\sin A+\\sin B=\\frac{\\sqrt{6}}{2}$\nD．$A C^{2}+B C^{2}=3$",
+        "question type":"objective question",
+        "ground_truth":"ABC",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao1",
+        "id":12,
+        "question（纯文本）":"若直线 $y=2 x+5$ 是曲线 $y=\\mathrm{e}^{x}+x+a$ 的切线，则 $a=$ $\\qquad$。",
+        "question type":"objective question",
+        "ground_truth":"4",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao1",
+        "id":13,
+        "question（纯文本）":"若一个等比数列的前 4 项和为 4 ，前 8 项和为 68 ，则该等比数列的公比为 $\\qquad$。",
+        "question type":"objective question",
+        "ground_truth":"2，-2",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao1",
+        "id":14,
+        "question（纯文本）":"一个箱子里有 5 个相同的球，分别以 $1 \\sim 5$ 标号，从中有放回地取三次，记至少取出一次的球的个数 $X$ ，则数学期望 $E(X)=$ $\\qquad$。",
+        "question type":"objective question",
+        "ground_truth":"61\/25",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao1",
+        "id":15,
+        "question（纯文本）":"为研究某乘病与超声波检查结果的关系，从做过超声波检查的人群中随机调查了 1000 人，得到如下列联表：\n\\begin{tabular}{|l|l|l|l|}\n\\hline \\backslashbox{组别}{超声波检查结果} & 正常 & 不正常 & 合计 \\\\\n\\hline 患该疾病 & 20 & 180 & 200 \\\\\n\\hline 未患该疾病 & 780 & 20 & 800 \\\\\n\\hline 合计 & 800 & 200 & 1000 \\\\\n\\hline\n\\end{tabular}\n（1）记超声波检查结果不正常者患该疾病的概率为 $P$ ，求 $P$ 的估计值；\n（2）根据小概率值 $\\alpha=0.001$ 的独立性检验，分析超声波检查结果是否与患该疾病有关。\n\n附：$\\chi^{2}=\\frac{n(a d-b c)^{2}}{(a+b)(c+d)(a+c)(b+d)}$ ，\n\\begin{tabular}{|c|l|c|c|}\n\\hline$P\\left(\\chi^{2} \\geqslant k\\right)$ & 0.005 & 0.010 & 0.001 \\\\\n\\hline$k$ & 3.841 & 6.635 & 10.828 \\\\\n\\hline\n\\end{tabular}",
+        "question type":"subjective question",
+        "ground_truth":"（1）P = 0.9 （2）765.625 > 10.828，有关",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao1",
+        "id":16,
+        "question（纯文本）":"设数列 $\\left\\{a_{n}\\right\\}$ 满足 $a_{1}=3, \\frac{a_{n+1}}{n}=\\frac{a_{n}}{n+1}+\\frac{1}{n(n+1)}$ ．\n（1）证明：$\\left\\{n a_{n}\\right\\}$ 为等差数列；\n（2）设 $f(x)=a_{1} x+a_{2} x^{2}+\\cdots+a_{m} x^{m}$ ，求 $f^{\\prime}(-2)$ ．",
+        "question type":"subjective question",
+        "ground_truth":"（1）na_n = n+2 （2）7\/9 - (1\/2 + (m+2)\/3)*(-2)^m",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao1",
+        "id":17,
+        "question（纯文本）":"如图所示的四棱雉 $P-A B C D$ 中，$P A \\perp$ 平面 $A B C D, B C \/ \/ A D, A B \\perp A D$ ．\n（1）证明：平面 $P A B \\perp$ 平面 $P A D$ ；\n（2）若 $P A=A B=\\sqrt{2}, A D=\\sqrt{3}+1, B C=2, P, B, C, D$ 在同一个球面上，设该球面的球心为 $O$ ．\n（i）证明：$O$ 在平面 $A B C D$ 上；\n（ii）求直线 $A C$ 与直线 $P O$ 所成角的余弦值．",
+        "question type":"subjective question",
+        "ground_truth":"(2)\\sqrt{2}\/3",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao1",
+        "id":18,
+        "question（纯文本）":"设椭圆 $C: \\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1(a>b>0)$ 的离心率为 $\\frac{2 \\sqrt{2}}{3}$ ，下顶点为 $A$ ，右顶点为 $B,|A B|=\\sqrt{10}$ ．\n（1）求椭圆的标准方程；\n（2）已知动点 $P$ 不在 $y$ 轴上，点 $R$ 在射线 $A P$ 上，且满足 $|A R| \\cdot|A P|=3$ ．\n（i）设 $P(m, n)$ ，求点 $R$ 的坐标（用 $m, n$ 表示）；\n（ii）设 $O$ 为坐标原点，$Q$ 是 $C$ 上的动点，直线 $O R$ 的斜率为直线 $O P$ 的斜率的 3 倍，求 $|P Q|$ 的最大值．",
+        "question type":"subjective question",
+        "ground_truth":"（1）x^2\/9 + y^2 = 1 （2）（i）R(3m\/(m^2 + (n+1)^2) , 3(n+1)\/(m^2 + (n+1)^2) - 1) （ii）3\\sqrt{3} + 3\\sqrt{2}",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao1",
+        "id":19,
+        "question（纯文本）":"设函数 $f(x)=5 \\cos x-\\cos 5 x$ ．\n（1）求 $f(x)$ 在 $\\left[0, \\frac{\\pi}{4}\\right]$ 的最大值；\n（2）给定 $\\theta \\in(0, \\pi)$ ，设 $a$ 为实数，证明：存在 $y \\in[a-\\theta, a+\\theta]$ ，使得 $\\cos y \\leqslant \\cos \\theta$ ；\n（3）若存在 $\\varphi$ 使得对任意 $x$ ，都有 $5 \\cos x-\\cos (5 x+\\varphi) \\leqslant b$ ，求 $b$ 的最小值．",
+        "question type":"subjective question",
+        "ground_truth":"（1）3\\sqrt{3} （3）3\\sqrt{3}",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao2",
+        "id":1,
+        "question（纯文本）":"样本数据 $2, 8, 14, 16, 20$ 的平均数为 ( )\n    \\begin{multicols}{4}\n        A. 8 \\quad B. 9 \\quad C. 12 \\quad D. 18\n    \\end{multicols}",
+        "question type":"objective question",
+        "ground_truth":"C",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao2",
+        "id":2,
+        "question（纯文本）":"已知 $z = 1 + i$，$\\frac{1}{z - 1} = ( )$\n    \\begin{multicols}{4}\n        A. $-i$ \\quad B. $i$ \\quad C. $-1$ \\quad D. $1$\n    \\end{multicols}",
+        "question type":"objective question",
+        "ground_truth":"A",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao2",
+        "id":3,
+        "question（纯文本）":"已知 $A = \\{-4, 0, 1, 2, 8\\}, B = \\{x \\mid x^3 = x\\}$，则 $A \\cap B = ( )$\n    \\begin{multicols}{4}\n        A. $\\{0, 1, 2\\}$ \\quad B. $\\{1, 2, 8\\}$ \\quad C. $\\{2, 8\\}$ \\quad D. $\\{0, 1\\}$\n    \\end{multicols}",
+        "question type":"objective question",
+        "ground_truth":"D",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao2",
+        "id":4,
+        "question（纯文本）":"不等式 $\\frac{x - 4}{x - 1} \\geq 2$ 的解集是 ( )\\\\\n\n        A. $\\{x \\mid -2 \\leq x \\leq 1\\}$ \\\\ \n        B. $\\{x \\mid x \\leq -2\\}$ \\\\\n        C. $\\{x \\mid -2 \\leq x < 1\\}$ \\\\ \n        D. $\\{x \\mid x > 1\\}$",
+        "question type":"objective question",
+        "ground_truth":"C",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao2",
+        "id":5,
+        "question（纯文本）":"在 $\\triangle ABC$ 中，$BC = 2$, $AC = 1 + \\sqrt{3}$, $AB = \\sqrt{6}$，则角 $A = ( )$\n    \\begin{multicols}{4}\n        A. $45^\\circ$ \\quad B. $60^\\circ$ \\quad C. $120^\\circ$ \\quad D. $135^\\circ$\n    \\end{multicols}",
+        "question type":"objective question",
+        "ground_truth":"A",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao2",
+        "id":6,
+        "question（纯文本）":"设抛物线 $C: y^2 = 2px$ ($p > 0$) 的焦点为 $F$，点 $A$ 在 $C$ 上，过 $A$ 作 $C$ 准线的垂线，垂足为 $B$。若直线 $BF$ 的方程为 $y = -2x + 2$，则 $|AF| = ( )$\n    \\begin{multicols}{4}\n        A. 3 \\quad B. 4 \\quad C. 5 \\quad D. 6\n    \\end{multicols}",
+        "question type":"objective question",
+        "ground_truth":"C",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao2",
+        "id":7,
+        "question（纯文本）":"记 $S_n$ 为等差数列 $\\{a_n\\}$ 的前 $n$ 项和，若 $S_3 = 6$, $S_5 = -5$，则 $S_6 = ( )$\n    \\begin{multicols}{4}\n        A. $-20$ \\quad B. $-15$ \\quad C. $-10$ \\quad D. $-5$\n    \\end{multicols}",
+        "question type":"objective question",
+        "ground_truth":"B",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao2",
+        "id":8,
+        "question（纯文本）":"已知 $0 < \\alpha < \\pi$, $\\cos \\frac{\\alpha}{2} = \\frac{\\sqrt{5}}{5}$，则 $\\sin \\left(\\alpha - \\frac{\\pi}{4}\\right) = ( )$\n    \\begin{multicols}{4}\n        A. $\\frac{\\sqrt{2}}{10}$ \\quad B. $\\frac{\\sqrt{2}}{5}$ \\quad C. $\\frac{3\\sqrt{2}}{10}$ \\quad D. $\\frac{7\\sqrt{2}}{10}$\n    \\end{multicols}\n\\end{enumerate}",
+        "question type":"objective question",
+        "ground_truth":"D",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao2",
+        "id":9,
+        "question（纯文本）":"记 $S_n$ 为等比数列 $\\{a_n\\}$ 的前 $n$ 项和，$q$ 为 $\\{a_n\\}$ 的公比，$q > 0$。若 $S_3 = 7$, $a_3 = 1$，则 ( )\n    \\begin{multicols}{4}\n        A. $q = \\frac{1}{2}$ \\quad B. $a_5 = \\frac{1}{9}$ \\quad C. $S_3 = 8$ \\quad D. $a_n + S_n = 8$\n    \\end{multicols}",
+        "question type":"objective question",
+        "ground_truth":"AD",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao2",
+        "id":10,
+        "question（纯文本）":"已知 $f(x)$ 是定义在 $\\mathbb{R}$ 上的奇函数，且当 $x > 0$ 时，$f(x) = (x^2 - 3)e^x + 2$，则 ( )\\\\\n\n        A. $f(0) = 0$ \\\\\n        B. 当 $x < 0$ 时，$f(x) = -x^2 - 3e^{-x} - 2$ \\\\\n        C. $f(x) \\geq 2$，当且仅当 $x \\geq \\sqrt{3}$ \\\\\n        D. $x = -1$ 是 $f(x)$ 的极大值点",
+        "question type":"objective question",
+        "ground_truth":"ABD",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao2",
+        "id":11,
+        "question（纯文本）":"双曲线 $C: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$ ($a > 0$, $b > 0$) 的左、右焦点为 $F_1, F_2$，左、右顶点分别为 $A_1, A_2$，以 $F_1F_2$ 为直径的圆与曲线 $C$ 的一条渐近线交于 $M, N$ 两点，且 $\\angle NA_1M = \\frac{5\\pi}{6}$，则 ( )\\\\\n\n        A. $\\angle A_1MA_2 = \\frac{\\pi}{6}$ \\\\\n        B. $|MA_1| = 2|MA_2|$ \\\\\n        C. $C$ 的离心率为 $\\sqrt{13}$ \\\\\n        D. 当 $a = \\sqrt{2}$ 时，四边形 $NA_1MA_2$ 的面积为 $8\\sqrt{3}$\n\n\\end{enumerate}",
+        "question type":"objective question",
+        "ground_truth":"ACD",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao2",
+        "id":12,
+        "question（纯文本）":"已知平面向量 $\\vec{a} = (x, 1), \\vec{b} = (x - 1, 2x)$，若 $\\vec{a} \\perp (\\vec{a} - \\vec{b})$，则 $|\\vec{a}| = $ \\rule{2cm}{0.15mm}.",
+        "question type":"objective question",
+        "ground_truth":"\\sqrt{2}",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao2",
+        "id":13,
+        "question（纯文本）":"若 $x = 2$ 是函数 $f(x) = (x - 1)(x - 2)(x - a)$ 的极值点，则 $f(0) = $ \\rule{2cm}{0.15mm}.",
+        "question type":"objective question",
+        "ground_truth":"-4",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao2",
+        "id":14,
+        "question（纯文本）":"一个底面半径为 4 cm，高为 9 cm 的封闭柱形容器（容器壁厚度忽略不计）内有两个半径相等的铁球，铁球半径的最大值为 \\rule{2cm}{0.15mm} cm.",
+        "question type":"objective question",
+        "ground_truth":"5\/2",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao2",
+        "id":15,
+        "question（纯文本）":"已知函数 $f(x) = \\cos(2x + \\varphi)$ ($0 \\leq \\varphi < \\pi$)，$f(0) = \\frac{1}{2}$.\n    \\begin{enumerate}[label=\\arabic*\\intertext{.}]\n        1. 求 $\\varphi$；\\\\\n        2. 设函数 $g(x) = f(x) + f\\left(x - \\frac{\\pi}{6}\\right)$，求 $g(x)$ 的值域及单调区间。\\\\\n    \\end{enumerate}",
+        "question type":"subjective question",
+        "ground_truth":"1.$\\varphi = \\frac{\\pi}{3}$\n2. - 单调递减区间：$\\boxed{\\left(-\\dfrac{\\pi}{12}, \\dfrac{5\\pi}{12}\\right)}$\n   - 单调递增区间：$\\boxed{\\left(\\dfrac{5\\pi}{12}, \\dfrac{11\\pi}{12}\\right)}$",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao2",
+        "id":16,
+        "question（纯文本）":"已知椭圆 $C: \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ ($a > b > 0$) 的离心率为 $\\frac{\\sqrt{2}}{2}$，长轴长为 4，\\\\\n\n        1. 求椭圆 $C$ 的方程；\\\\\n        2. 过点 $(0, -2)$ 的直线 $l$ 与 $C$ 交于 $A$、$B$ 两点，$O$ 为坐标原点。若 $\\triangle OAB$ 的面积为 $\\sqrt{2}$，求 $|AB|$。",
+        "question type":"subjective question",
+        "ground_truth":"1.$\\frac{x^2}{4} + \\frac{y^2}{2} = 1$\n2.\\sqrt{5}",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao2",
+        "id":17,
+        "question（纯文本）":"如图，四边形 $ABCD$ 中，$AB \\parallel CD$, $\\angle DAB = 90^\\circ$，$F$ 为 $CD$ 中点，$E$ 在 $AB$ 上，$EF \\parallel AD$，$AB = 3AD$, $CD = 2AD$，将四边形 $EFDA$ 沿 $EF$ 翻折至四边形 $EFD'A'$，使得 $EFD'A'$ 与 $EFCB$ 所成的二面角为 $60^\\circ$。\\\\\n        1. 证明：$A'B \\perp CD'F$；\\\\\n        2. 求 $BCD'$ 与 $EFD'A'$ 所成二面角的正弦值。\\\\",
+        "question type":"subjective question",
+        "ground_truth":"2.$\\frac{\\sqrt{42}}{7}$",
+        "难度划分":"easy"
+    },
+    {
+        "type":"xingaokao2",
+        "id":18,
+        "question（纯文本）":"已知函数 $f(x) = \\ln(1 + x) - x + \\frac{1}{2}x^2 - kx^3$，其中 $0 < k < \\frac{1}{3}$。\\\\\n        1. 证明：$f(x)$ 在区间 $(0, +\\infty)$ 存在唯一的极值点和唯一的零点；\\\\\n        2. 设 $x_1, x_2$ 为 $f(x)$ 在区间 $(0, +\\infty)$ 的极值点和零点。\\\\\n            i. 设函数 $g(t) = f(x_1 + t) - f(x_1 - t)$，证明：$g(t)$ 在区间 $(0, x_1)$ 上单调递减；\\\\\n            ii. 比较 $2x_1$ 与 $x_2$ 的大小，并证明你的结论。",
+        "question type":"subjective question",
+        "ground_truth":"3.$$2x_1 > x_2$$",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"xingaokao2",
+        "id":19,
+        "question（纯文本）":"甲、乙两人进行乒乓球练习，每个球胜者得 1 分，负者得 0 分。设每个球甲胜的概率为 $p$ ($\\frac{1}{2} < p < 1$)，乙胜的概率为 $q$，$p + q = 1$，且各球胜负相互独立。对正整数 $k \\geq 2$，记 $p_k$ 为打完 $k$ 个球后甲比乙至少多得 2 分的概率，$q_k$ 为打完 $k$ 个球后乙比甲至少多得 2 分的概率。\\\\\n        1. 求 $p_3, p_4$（用 $p$ 表示）；\\\\\n        2.若 $\\frac{p_4 - p_3}{q_4 - q_3} = 4$，求 $p$；\\\\\n        3. 证明：对任意正整数 $m, p_{2 m+1}-q_{2 m+1}<p_{2 m}-q_{2 m}<p_{2 m+2}-q_{2 m+2}$  ",
+        "question type":"subjective question",
+        "ground_truth":"1.$p_4 = p^4 + 4p^3q$\n2.$\\frac{2}{3}$",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":1,
+        "question（纯文本）":"集合 $U=1,2,3,4,5 A=1,3 B=2,3,5$ ，则 $C_{U}(A \\cup B)=$\nA．$\\{1,2,3,4\\}$\nB．$\\{2,3,4\\}$\nC．$\\{2,4\\}$\nD．$\\{4\\}$",
+        "question type":"objective question",
+        "ground_truth":"D",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":2,
+        "question（纯文本）":"＂$x=0$＂是＂ $\\sin 2 x=0$＂的\nA．充分不必要条件\nB．必要不充分条件\nC．充要条件\nD．既不充分也不必要条件",
+        "question type":"objective question",
+        "ground_truth":"A",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":3,
+        "question（纯文本）":"已知函数 $y=f(x)$ 的图像如下，则 $f(x)$ 的解析式可能为\nA．$f(x)=\\frac{x}{1-|x|}$\nB．$f(x)=\\frac{x}{|x|-1}$\nC．$f(x)=\\frac{|x|}{1-x^{2}}$\nD．$f(x)=\\frac{|x|}{x^{2}-1}$",
+        "question type":"objective question",
+        "ground_truth":"D",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":4,
+        "question（纯文本）":"若 $ m $ 为直线，$ \\alpha, \\beta $ 为两个平面，则下列结论中正确的是（）\nA. 若 $ m \\parallel \\alpha $，$ n \\subseteq \\alpha $，则 $ m \\parallel n $\nB. 若 $ m \\perp \\alpha $，$ m \\perp \\beta $，则 $ \\alpha \\perp \\beta $\nC. 若 $ m \\parallel \\alpha $，$ m \\perp \\beta $，则 $ \\alpha \\perp \\beta $\nD. 若 $ m \\subseteq \\alpha $，$ \\alpha \\perp \\beta $，则 $ m \\perp \\beta $",
+        "question type":"objective question",
+        "ground_truth":"C",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":5,
+        "question（纯文本）":"下列说法错误的是\nA．$X \\sim N\\left(\\mu, \\sigma^{2}\\right)$ ，若 $P(X \\leqslant \\mu-\\sigma)=P(X \\geqslant \\mu+\\sigma)$\nB．$X \\sim N\\left(1,2^{2}\\right), Y \\sim N\\left(2,2^{2}\\right)$ ，则 $P(X<1)<P(Y<2)$\nC．$|r|$ 越接近于 1 ，线性相关程度越强\nD．$|r|$ 越接近于 0 ，线性相关程度越弱",
+        "question type":"objective question",
+        "ground_truth":"B",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":6,
+        "question（纯文本）":"$S_{n}=-n^{2}+8 n$ ．则 $\\left|a_{n}\\right|$ 前 12 项和\nA. 112\nB. 48\nC. 80\nD. 64",
+        "question type":"objective question",
+        "ground_truth":"C",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":7,
+        "question（纯文本）":"$f(x)=0.3^{x}-\\sqrt{x}$ 的零点在\nA．$(0,0.3)$\nB．$(0.3,0.5)$\nC．$(0.5,1)$\nD．$(1,2)$",
+        "question type":"objective question",
+        "ground_truth":"B",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":8,
+        "question（纯文本）":"$f(x)=\\sin (\\omega x+\\varphi)(\\omega>0,-\\pi<\\varphi<\\pi)$ ，在 $\\left[-\\frac{\\pi}{12}, \\frac{\\pi}{12}\\right]$ 上单调递增，且 $x=\\frac{\\pi}{12}$ 为它的一条对称轴， $\\left(\\frac{\\pi}{3}, 0\\right)$ 是它的一个对称中心，当 $x \\in\\left[0, \\frac{\\pi}{2}\\right]$ 时，$f(x)$ 的最小值为\nA．$-\\frac{\\sqrt{3}}{2}$\nB．$-\\frac{1}{2}$\nC． 1\nD． 0",
+        "question type":"objective question",
+        "ground_truth":"A",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":9,
+        "question（纯文本）":"双曲线 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1(a>0, b>0)$ 的左、右焦点分别为 $F_{1}, F_{2}$ ，以右焦点 $F_{2}$ 为焦点的抛物线 $y^{2}=2 p x(p>$ $0)$ 与双曲线在第一象限的交点为 $P$ ，若 $\\left|P F_{1}\\right|+\\left|P F_{2}\\right|=3\\left|F_{1} F_{2}\\right|$ ，则双曲线的离心率 $e=$\nA． 2\nB． 5\nC．$\\frac{\\sqrt{2}+1}{2}$\nD．$\\frac{\\sqrt{5}+1}{2}$",
+        "question type":"objective question",
+        "ground_truth":"A",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":10,
+        "question（纯文本）":"已知 $i$ 是虚数单位，则 $\\left|\\frac{3+i}{i}\\right|=$ $\\qquad$。",
+        "question type":"objective question",
+        "ground_truth":"\\sqrt{10}",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":11,
+        "question（纯文本）":"在 $(x-1)^{6}$ 的展开式中，$x^{3}$ 项的系数为 $\\qquad$。",
+        "question type":"objective question",
+        "ground_truth":"-20",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":12,
+        "question（纯文本）":"$l_{1}: x-y+6=0$ 与 $x$ 轴交于点 $A$ ，与 $y$ 轴交于点 $B$ ，与圆 $(x+1)^{2}+(y-3)^{2}=r^{2}$ 交于 $C, D$ 两点，$|A B|=$ $3|C D|$ ，则 $r=$ $\\qquad$。",
+        "question type":"objective question",
+        "ground_truth":"2",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":13,
+        "question（纯文本）":"小桐操场跑圈，一周 2 次，一次 5 圈或 6 圈．第一次跑 5 圈或 6 圈的概率均为 0.5 ，若第一次跑 5 圈，则第二次跑 5 圈的概率为 $0.4,6$ 圈的概率为 0.6 ；若第一次跑 6 圈，则第二次跑 5 圈的概率为 $0.6,4$ 圈子的概率为 0.4 ．小桐一周跑 11 圈的概率为 $\\qquad$ ；若一周至少跑 11 圈为动量达标，则连结跑 4 财，记合格周数为 $X$ ，则期望 $E(X)=$ $\\qquad$。",
+        "question type":"objective question",
+        "ground_truth":"0.6；3.2",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":14,
+        "question（纯文本）":"$\\triangle A B C$ 中，$D$ 为 $A B$ 边中点， $\\overrightarrow{C E}=\\frac{1}{3} \\overrightarrow{C D}, \\overrightarrow{A B}=a, \\overrightarrow{A C}=b$ ，则 $\\overrightarrow{A E}=$ $\\qquad$ ；若 $|\\overrightarrow{A E}|=5, A E \\perp C B$ ，则 $\\overrightarrow{A E} \\cdot \\overrightarrow{C D}=$ $\\qquad$。",
+        "question type":"objective question",
+        "ground_truth":"$\\frac{1}{6}a + \\frac{2}{3}b$; $-15$",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":15,
+        "question（纯文本）":"若 $a, b \\in \\mathbb{R}$ ，对 $\\forall x \\in[-2,2]$ ，均有 $(2 a+b) x^{2}+b x-a-1 \\leqslant 0$ 恒成立，则 $2 a+b$ 的最小值为 $\\qquad$ ．",
+        "question type":"objective question",
+        "ground_truth":"-4",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":16,
+        "question（纯文本）":"在 $\\triangle A B C$ 中，$a \\sin B=\\sqrt{3} b \\cos A, c-2 b=1, a=\\sqrt{7}$ ．\n（1）求角 $A$ ；\n（2）求边 $c$ ；\n（3）求 $\\sin (A+2 B)$ ．",
+        "question type":"subjective question",
+        "ground_truth":"(1) \\ A = \\frac{\\pi}{3} \\\\\n(2) \\ c=3 \\\\\n(3) \\ \\sin(A + 2B) = \\frac{4\\sqrt{3}}{7}",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":17,
+        "question（纯文本）":"正方体 $A B C D-A_{1} B_{1} C_{1} D_{1}$ 的棱长为 $4, E, F$ 分别为 $A_{1}, D_{1}, C_{1} B_{1}$ 中点，$C G=3 C_{1} G$ ．\n（1）求证：$G F \\perp$ 平面 $E B F$ ；\n（2）求平面 $E B F$ 与平面 $E B G$ 夹角的余弦值；\n（3）求三棱一 $D-B E F$ 的体积．",
+        "question type":"subjective question",
+        "ground_truth":"(2) $\\frac{\\sqrt{5}}{3}$\n\n(3) $\\frac{32}{3}$",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":18,
+        "question（纯文本）":"已知椭圆 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1(a>b>0)$ 的左焦点为 $F$ ，右顶点为 $A, P$ 为 $x=a$ 上一点，且直线 $P F$ 的斜率为 $\\frac{1}{3}, \\triangle P F A$ 的面积为 $\\frac{3}{2}$ ，离心率为 $\\frac{1}{2}$ ．\n（1）求梢圆的方程；\n（2）过点 $P$ 的直线与椭圆有唯一交点 $B$（异于点 $A$ ），求证：$P F$ 平分 $\\angle A F B$ ．",
+        "question type":"subjective question",
+        "ground_truth":"(1)\\quad\\frac{x}^2}{4}+\\frac{y}^2}{3}=1",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":19,
+        "question（纯文本）":"$\\left\\{a_{n}\\right\\}$ 是等差数列，$\\left\\{b_{n}\\right\\}$ 是等比数列，$a_{1}=b_{1}=2, a_{2}=b_{2}+1, a_{3}=b_{3}$ ．\n（1）求 $\\left\\{a_{n}\\right\\},\\left\\{b_{n}\\right\\}$ 的通顶公式；\n（2）$\\forall n \\in \\mathbb{N}^{*}$ 有 $T_{n}=\\left\\{p_{1} a_{1} b_{1}+p_{2} a_{2} b_{2}+\\cdots+p_{n} a_{n} b_{n} \\mid p_{1}, p_{2}, \\cdots, p_{n} \\in I\\right\\}, I=\\{0,1\\}$ ．\n（i）求证：$\\forall t \\in T_{n}$ ，均有 $t<a_{n+1} b_{n+1}$ ；\n（ii）求 $T_{n}$ 所有元元之和。",
+        "question type":"subjective question",
+        "ground_truth":"(1) \\quad a_n=3n-1 \\qquad b_n=2^n \\\\\n(2) \\\\\n\\text{(i)} 证明\n\\\\\n\\text{(ii)} \\ 2^{n-1}[(3n-4) \\cdot 2^{n-1} + 8]",
+        "难度划分":"easy"
+    },
+    {
+        "type":"Tianjinjuan",
+        "id":20,
+        "question（纯文本）":"己知函数 $f(x)=a x-(\\ln x)^{2}$ ．\n（1）$a=1$ 时，求 $f(x)$ 在点 $(1, f(1))$ 处的切线方程；\n（2）$f(x)$ 有 3 个零点 $x_{1}, x_{2}, x_{3}$ ，且 $\\left(x_{1}<x_{2}<x_{3}\\right)$ 。\n（i）求 $a$ 的取值范围；\n（ii）证明：$\\left(\\ln x_{2}-\\ln x_{1}\\right) \\cdot \\ln x_{3}<\\frac{4 \\mathrm{e}}{\\mathrm{e}-1}$ ．",
+        "question type":"subjective question",
+        "ground_truth":"(1) $y = (x-1) + 1$，即$x - y = 0$。\n\n(2) \/\/（i）$\\left(0, \\frac{4}{e^2}\\right)$\n\/\/（ii）证明",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"北京高考",
+        "id":1,
+        "question（纯文本）":"集合 $M=\\{x \\mid 2 x-1>5\\}, N=\\{1,2,3\\}$ ，则 $M \\cap N=$\n（A）$\\{1,2,3\\}$\n（B）$\\{2,3\\}$\n（C）$\\{3\\}$\n（D）$\\varnothing$",
+        "question type":"objective question",
+        "ground_truth":"D",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":2,
+        "question（纯文本）":"已知复数 $z$ 满足 $\\mathrm{i} \\cdot z+2=2 \\mathrm{i}$ ，则 $|z|=$\n（A）$\\sqrt{2}$\n（B） $2 \\sqrt{2}$\n（C） 4\n（D） 8",
+        "question type":"objective question",
+        "ground_truth":"B",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":3,
+        "question（纯文本）":"双曲线 $x^{2}-4 y^{2}=4$ 的离心率为\n（A）$\\frac{\\sqrt{3}}{2}$\n（B）$\\frac{\\sqrt{5}}{2}$\n（C）$\\frac{5}{4}$\n（D）$\\sqrt{5}$",
+        "question type":"objective question",
+        "ground_truth":"B",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":4,
+        "question（纯文本）":"为得到函数 $y=9^{x}$ 的图像，只需把函数 $y=3^{x}$ 的图像上的所有点\n（A）横坐标变成原来的 $\\frac{1}{2}$ 倍，纵坐标不变\n（B）横坐标变成原来的 2 倍，纵坐标不变\n（C）纵坐标变成原来的 $\\frac{1}{3}$ 倍，横坐标不变\n（D）纵坐标变成原来的 3 倍，横坐标不变",
+        "question type":"objective question",
+        "ground_truth":"A",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":5,
+        "question（纯文本）":"已知 $\\left\\{a_{n}\\right\\}$ 是公差不为 0 的等差数列，$a_{1}=-2$ ，若 $a_{3}, a_{4}, a_{6}$ 成等比数列，则 $a_{10}=$\n（A）-20\n（B）-18\n（C） 16\n（D） 18",
+        "question type":"objective question",
+        "ground_truth":"C",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":6,
+        "question（纯文本）":"已知 $a>0, b>0$ ，则\n（A）$a^{2}+b^{2}>2 a b$\n（B）$\\frac{1}{a}+\\frac{1}{b} \\geq \\frac{1}{a b}$\n（C）$a+b>\\sqrt{a b}$\n（D）$\\frac{1}{a}+\\frac{1}{b} \\geq \\frac{2}{\\sqrt{a b}}$",
+        "question type":"objective question",
+        "ground_truth":"C",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":7,
+        "question（纯文本）":"已知函数 $f(x)$ 的定义域为 $D$ ，则＂函数 $f(x)$ 的值域为 $\\mathbf{R}$＂是＂对任意 $M \\in \\mathbf{R}$ ，存在 $x_{0} \\in D$ ，使得 $\\left|f\\left(x_{0}\\right)\\right|>M^{\\prime \\prime}$ 的\n（A）充分不必要条件\n（B）必要不充分条件\n（C）充分必要条件\n（D）既不充分也不必要条件",
+        "question type":"objective question",
+        "ground_truth":"A",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":8,
+        "question（纯文本）":"设函数 $f(x)=\\sin (\\omega x)+\\cos (\\omega x)(\\omega>0)$ ，若 $f(x+\\pi)=f(x)$ 恒成立，且 $f(x)$ 在 $\\left[0, \\frac{\\pi}{4}\\right]$ 上存在零点，则 $\\omega$ 的最小值为\n（A） 8\n（B） 6\n（C） 4\n（D） 3",
+        "question type":"objective question",
+        "ground_truth":"C",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":9,
+        "question（纯文本）":"在一定条件下，某人工智能大语言模型训练 $N$ 个单位的数据量所需要时间 $T=k \\log _{2} N$（单位：小时），其中 $k$ 为常数．在此条件下，已知训练数据量 $N$ 从 106 个单位增加到 $1.024 \\times 10^{9}$ 个单位时，训练时间增加 20 小时；当训练数据量 $N$ 从 $1.024 \\times 10^{8}$ 个单位增加到 $4.096 \\times 10^{8}$ 个单位时，训练时间增加（单位：小时）\n（A） 2\n（B） 4\n（C） 20\n（D） 40",
+        "question type":"objective question",
+        "ground_truth":"B",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":10,
+        "question（纯文本）":"已知平面直角坐标系 $x O y$ 中，$|\\overrightarrow{O A}|=|\\overrightarrow{O B}|=\\sqrt{2},|\\overrightarrow{A B}|=2$ ，设 $C(3,4)$ ，则 $|2 \\overrightarrow{C A}+\\overrightarrow{A B}|$ 的取值范围是\n（A）$[6,14]$\n（B）$[6,12]$\n（C）$[8,14]$\n（D）$[8,12]$",
+        "question type":"objective question",
+        "ground_truth":"D",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":11,
+        "question（纯文本）":"抛物线 $y^{2}=2 p x(p>0)$ 的顶点到焦点的距离为 3 ，则 $p=$ $\\qquad$ ．",
+        "question type":"objective question",
+        "ground_truth":"6",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":12,
+        "question（纯文本）":"已知 $(1-2 x)^{4}=a_{0}-2 a_{1} x+4 a_{2} x^{2}-8 a_{3} x^{3}+16 a_{4} x^{4}$ ，则 $a_{0}=$ $\\qquad$ ；$a_{1}+a_{2}+a_{3}+a_{4}=$ $\\qquad$。",
+        "question type":"objective question",
+        "ground_truth":"1,15",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":13,
+        "question（纯文本）":"已知 $\\alpha, \\beta \\in[0,2 \\pi]$ ，且 $\\sin (\\alpha+\\beta)=\\sin (\\alpha-\\beta), \\cos (\\alpha+\\beta) \\neq \\cos (\\alpha-\\beta)$ ，写出满足条件的一组 $(\\alpha, \\beta)=$ $\\qquad$。",
+        "question type":"objective question",
+        "ground_truth":"pi\/2，pi\/6 (答案不唯一)",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":14,
+        "question（纯文本）":"某科技兴趣小组通过 3D 打印机的一个零件可以抽象为如图所示的多面体，其中 $A B C D E F$ 是一个平行多边形，平面 $A R F \\perp$ 平面 $A B C$ ，平面 $T C D \\perp$ 平面 $A B C, A B \\perp B C, A B \/ \/ R S \/ \/ E F \/ \/ C D$ ， $A F \/ \/ S T \/ \/ B C \/ \/ E D$ ．若 $A B=B C=8, A F=C D=4, A R=R F=T C=T D=\\frac{5}{2}$ ，则该多面体的体积为 $\\qquad$。",
+        "question type":"objective question",
+        "ground_truth":"60",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"北京高考",
+        "id":15,
+        "question（纯文本）":"已知函数 $f(x)$ 的定义域为 $\\mathbf{R}$ ，则下列说法正确的有 $\\qquad$。\n（1）存在在 $\\mathbf{R}$ 上单调递增的函数 $f(x)$ 使得 $f(x)+f(2 x)=-x$ 恒成立；\n（2）存在在 $\\mathbf{R}$ 上单调递减的函数 $f(x)$ 使得 $f(x)-f(2 x)=-x$ 恒成立；\n（3）使得 $f(x)+f(-x)=\\cos x$ 恒成立的函数 $f(x)$ 存在且有无穷多个；\n（4）使得 $f(x)-f(-x)=\\cos x$ 恒成立的函数 $f(x)$ 存在且有无穷多个．",
+        "question type":"objective question",
+        "ground_truth":"2，3",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":16,
+        "question（纯文本）":"在 $\\triangle A B C$ 中， $\\cos A=-\\frac{1}{3}, a \\sin C=4 \\sqrt{2}$ ．\n（1）求 $c$ ；\n（2）再从条件（1）、条件（2）、条件（3）这三个条件中选择一个作为已知，使得 $\\triangle A B C$ 存在，求 $B C$ 的高条件（1）：$a=6$ ；\n条件（2）：$b \\sin C=\\frac{10 \\sqrt{2}}{3}$ ；\n条件（3）：$S_{\\triangle A B C}=10 \\sqrt{2}$ ．\n注：如果选择的条件不符合要求，第（2）问得 0 分；如果选择多个符合要求的条件分别解答，按第一个解答得分．",
+        "question type":"subjective question",
+        "ground_truth":"(1)6 （2）1）由平方关系、正弦定理即可求解；\n（2）若选（1），可得 $A, C$ 都是钝角，矛盾；若选（2），由正弦定理、平方关系求得， $\\sin B, \\cos B$ ，进一步由 $A D=c \\sin B$ 求得高，并说明此时三角形 $A B C$ 存在即可；若选（3），首先根据三角形面积公式求得 $b$ ，再根据余弦定理可求得 $a$ ，由此可说明三角形 $A B C$ 存在，且可由等面积法求解 $A D$ ．",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"北京高考",
+        "id":17,
+        "question（纯文本）":"如图，在四棱雉 $P-A B C D$ 中，$\\triangle A B C$ 与 $\\triangle A D C$ 均为等腰直角三角形，$\\angle B A C=90^{\\circ}, \\angle A D C=90^{\\circ}$ ， $E$ 为线段 $B C$ 的中点．\n（1）若 $F, G$ 分别为线段 $P D, P E$ 中点，求证：$F G \/ \/$ 平面 $P A B$ ；\n（2）若 $P A \\perp$ 平面 $A B C D, P A=A C$ ，求 $A B$ 与平面 $P C D$ 夹角的正弦值．",
+        "question type":"subjective question",
+        "ground_truth":"（1）取 $P A$ 的中点 $N, P B$ 的中点 $M$ ，连接 $F N 、 M N$ ，\n$\\because \\triangle A C D$ 与 $\\vee A B C$ 为等腰直角三角形 $\\angle A D C=90^{\\circ}, \\angle B A C=90^{\\circ}$\n不妨设 $A D-C D=2, \\therefore A C=A B=2 \\sqrt{2}$\n$\\therefore B C=4, \\because E 、 F$ 分别为 $B C 、 P D$ 的中点，$\\therefore F N=\\frac{1}{2} A D=1, B E=2$ ，\n$\\therefore G M=1$ ，\nQ $\\angle D A C=45^{\\circ}, \\angle A C B=45^{\\circ}$\n$\\therefore A D \/ \/ B C$ ，\n$\\therefore F N \/ \/ G M$ ，\n$\\therefore$ 四边形 $F G M N$ 为平行四边形，\n$\\therefore F G \/ \/ M N$ ，\n$\\because F G \\not \\subset$ 面 $P A B, M N \\subset$ 面 $P A B, \\therefore F G \/ \/$ 面 $P A B$ ；  （2）$\\frac{\\sqrt{3}}{3}$",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"北京高考",
+        "id":18,
+        "question（纯文本）":"有一道选择题考查了一个知识点．甲、乙两校各随机抽取 100 人，甲校有 80 人答对，乙校有 75 人答对，用频率估计概率．\n（1）从甲校随机抽取 1 人，求这个人做对该题目的概率；\n（2）从甲、乙两校各随机抽取 1 人，设 $X$ 为做对的人数，求恰有 1 人做对的概率以及 $X$ 的数学期望；\n（3）若甲校同学掌握这个知识点则有 $100 \\%$ 的概率做对该题目，乙校同学掌握这个知识点则有 $85 \\%$的概率做对该题目，未掌握该知识点的同学都是从四个选项里面随机选择一个，设甲校学生掌握该知识点的概率为 $p_{1}$ ，乙校学生掌握该知识点的概率为 $p_{2}$ ，试比较 $p_{1}$ 与 $p_{2}$ 的大小（结论不要求证明）。",
+        "question type":"subjective question",
+        "ground_truth":"（1）$\\frac{4}{5}$\n（2） $0.35, E(X)=1.55$\n（3）$p_{1}<p_{2}$",
+        "难度划分":"easy"
+    },
+    {
+        "type":"北京高考",
+        "id":19,
+        "question（纯文本）":"已知椭圆 $E: \\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1(a>b>0)$ ，离心率为 $\\frac{\\sqrt{2}}{2}$ ．椭圆 $E$ 上的点到两个焦点的距离之和为 4 ．\n（1）求椭圆 $E$ 的方程；\n（2）已知椭圆 $E$ 上一点 $M\\left(x_{0}, y_{0}\\right)\\left(x_{0} \\neq 0\\right)$ ，直线 $x_{0} x+2 y_{0} y-4=0$ 与 $y=2, y=-2$ 的交点为 $A, B$ ． $\\triangle A O M$ 与 $\\triangle B O M$ 的面积分别为 $S_{1}, S_{2}$ ．猜想 $\\frac{S_{1}}{S_{2}}$ 与 $\\frac{|O A|}{|O B|}$ 的数量关系并求证．",
+        "question type":"subjective question",
+        "ground_truth":"（1）$\\frac{x^{2}}{4}+\\frac{y^{2}}{2}=1$\n（2）$\\frac{S_{1}}{S_{2}}=\\frac{|O A|}{|O B|}$",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"北京高考",
+        "id":20,
+        "question（纯文本）":"已知函数 $f(x)$ 的定义域为 $(-1,+\\infty), f(0)=0, f^{\\prime}(x)=\\frac{\\ln (1+x)}{1+x}$ ，直线 $l_{1}$ 是曲线 $y=f(x)$ 在点 $A(a, f(a))$ 处的切线．\n（1）求导函数 $f^{\\prime}(x)$ 的最大值；\n（2）当 $a \\in(-1,0)$ 时，求证：除点 $A$ 以外，$y=f(x)$ 在 $l_{1}$ 的上方；\n（3）当 $a \\in(0,+\\infty)$ 时，过点 $A$ 作与 $l_{1}$ 垂直的直线 $l_{2}, l_{1}, l_{2}$ 分别与 $x$ 轴交于点 $x_{1}, x_{2}$ ，求 $\\frac{2 a-x_{2}-x_{1}}{x_{2}-x_{1}}$的取值范围．",
+        "question type":"subjective question",
+        "ground_truth":"（1）$\\frac{1}{\\mathrm{e}}$\n（2）证明见解析\n（3）$\\left[\\frac{\\mathrm{e}^{2}-1}{\\mathrm{e}^{2}+1}, 1\\right)$",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"北京高考",
+        "id":21,
+        "question（纯文本）":"已知集合 $A=\\{1,2,3,4,5,6,7,8\\}, M=\\left\\{\\left(x_{i}, y_{i}\\right) \\mid x_{i} \\in A, y_{i} \\in A\\right\\}$ ，从 $M$ 中选出 $n$ 个有序数对构成一列：$\\left(x_{1}, y_{1}\\right),\\left(x_{2}, y_{2}\\right), \\cdots,\\left(x_{n}, y_{n}\\right)$ 。若相邻两项 $\\left(x_{i}, y_{i}\\right),\\left(x_{i+1}, y_{i+1}\\right)$ 满足 $\\left\\{\\begin{array}{l}\\left|x_{i+1}-x_{i}\\right|=3 \\\\ \\left|y_{i+1}-y_{i}\\right|=4\\end{array}\\right.$ 或 $\\left\\{\\begin{array}{l}\\left|x_{i+1}-x_{i}\\right|=4 \\\\ \\left|y_{i+1}-y_{i}\\right|=3\\end{array}\\right.$ ，则称其为 $k$ 列．\n（1）若 $k$ 列的第 1 项为 $(3,3)$ ，求第 2 项；\n（2）若 $\\tau$ 为 $k$ 列，且满足 $i$ 为奇数时，$x_{i} \\in\\{1,2,7,8\\} ; i$ 为偶数时，$x_{i} \\in\\{3,4,5,6\\}$ 。判断：$(3,2)$ 与 $(4,4)$ 能否同时在 $\\tau$ 中，并给出证明；\n（3）证明：$M$ 中的所有元素都不构成 $k$ 列．",
+        "question type":"subjective question",
+        "ground_truth":"（1）$(6,7)$ 或 $(7,6)$（2）假设二者同时出现在 $\\tau$ 中，由于 $k$ 列取反序后仍是 $k$ 列，故可以不妨设 $(3,2)$ 在 $(4,4)$ 之前．\n\n显然，在 $k$ 列中，相邻两项的横纵坐标之和的奇偶性总是相反的，所以从 $(3,2)$ 到 $(4,4)$ 必定要向下一项走奇数次．\n\n但又根据题目条件，这两个点的横坐标均在中，所以从 $(3,2)$ 到 $(4,4)$ 必定要向下一项走偶数次．\n\n这导致矛盾，所以二者不能同时出现在 $\\tau$ 中．\n（3）假设全体元素构成一个 $k$ 列，则 $n=64$ ．\n设 $T_{1}=\\{(x, y) \\mid x \\in\\{1,2,7,8\\}, y \\in\\{1,2,3,4,5,6,7,8\\}\\}$ ，\n$T_{2}=\\{(x, y) \\mid x \\in\\{3,4,5,6\\}, y \\in\\{1,2,3,4,5,6,7,8\\}\\}$.\n\n则 $T_{1}$ 和 $T_{2}$ 都包含 32 个元索，且 $T_{1}$ 中元素的相邻项必定在 $T_{2}$ 中．\n\n如果存在至少两对相邻的项属于 $T_{2}$ ，那么属于 $T_{2}$ 的项的数目一定多于属于 $T_{1}$ 的项的数目，所以至多存在一对相邻的项属于 $T_{2}$ ．\n\n如果存在，则这对相邻的项的序号必定形如 $2 m$ 和 $2 m+1$ ，\n\n否则将导致属于 $T_{2}$ 的项的个数比属于 $T_{1}$ 的项的个数多 2 ，此时 $m=1,2,3, \\cdots, 31$ ．\n\n从而这个序列的前 $2 m$ 项中，第奇数项属于 $T_{1}$ ，第偶数项属于 $T_{2}$ ；\n\n这个序列的后 64－2m 项中，第奇数项属于 $T_{2}$ ，第偶数项属于 $T_{1}$ ．\n\n如果不存在相邻的属于 $T_{2}$ 的项，那么也可以看作上述表示在 $m=0$ 或 $m=32$ 的特殊情况．\n\n这意味着必定存在 $m \\in\\{0,1,2, \\ldots, 32\\}$ ，使得 $\\left\\{\\begin{array}{l}\\left(x_{2 k-1}, y_{2 k-1}\\right) \\in T_{1},\\left(x_{2 k}, y_{2 k}\\right) \\in T_{2}, 1 \\leq k \\leq m \\\\ \\left(x_{2 k-1}, y_{2 k-1}\\right) \\in T_{2},\\left(x_{2 k}, y_{2 k}\\right) \\in T_{1}, m+1 \\leq k \\leq 32\\end{array}\\right.$ ．\n\n由于相邻两项的横纵坐标之和的奇偶性必定相反，故 $T_{1}$ 中横纵坐标之和为奇数的点和横纵坐标之和为偶数的点的数量一定分别是 $m$ 和 $32-m$（不一定对应）。\n\n但容易验证，$T_{1}$ 和 $T_{2}$ 都包含 16 个横纵坐标之和为奇数的点和 16 个横纵坐标之和为偶数的点，所以 $m=32-m=16$ ，得 $m=16$ ．\n\n从而有 $\\left\\{\\begin{array}{l}\\left(x_{2 k-1}, y_{2 k-1}\\right) \\in T_{1},\\left(x_{2 k}, y_{2 k}\\right) \\in T_{2}, 1 \\leq k \\leq 16 \\\\ \\left(x_{2 k-1}, y_{2 k-1}\\right) \\in T_{2},\\left(x_{2 k}, y_{2 k}\\right) \\in T_{1}, 17 \\leq k \\leq 32\\end{array}\\right.$ ．\n这就得到 $T_{1}=\\left\\{\\left(x_{k}, y_{k}\\right) \\mid k=1,3,5, \\ldots, 29,31,34,36, \\ldots, 62,64\\right\\}$ ．\n再设 $T_{3}=\\{(x, y) \\mid x \\in\\{1,2,3,4,5,6,7,8\\}, y \\in\\{1,2,7,8\\}\\}$ ，\n$T_{4}=\\{(x, y) \\mid x \\in\\{1,2,3,4,5,6,7,8\\}, y \\in\\{3,4,5,6\\}\\}$.\n则同理有 $\\left\\{\\begin{array}{l}\\left(x_{2 k-1}, y_{2 k-1}\\right) \\in T_{3},\\left(x_{2 k}, y_{2 k}\\right) \\in T_{4}, 1 \\leq k \\leq 16 \\\\ \\left(x_{2 k-1}, y_{2 k-1}\\right) \\in T_{4},\\left(x_{2 k}, y_{2 k}\\right) \\in T_{3}, 17 \\leq k \\leq 32\\end{array}\\right.$ ．\n这意味着 $T_{3}=\\left\\{\\left(x_{k}, y_{k}\\right) \\mid k=1,3,5, \\ldots, 29,31,34,36, \\ldots, 62,64\\right\\}$ ．\n从而得到 $T_{3}=T_{1}$ ，但显然它们是不同的集合，矛盾．\n所以全体元素不能构成一个 $k$ 列．",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":1,
+        "question（纯文本）":"已知全集 $U=\\{x \\mid 2 \\leqslant x \\leqslant 5, x \\in \\mathbf{R}\\}$ ，集合 $A=\\{x \\mid 2 \\leqslant x<4, x \\in \\mathbf{R}\\}$ ，则 $\\bar{A}=$ $\\qquad$",
+        "question type":"objective question",
+        "ground_truth":"[4,5]",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":2,
+        "question（纯文本）":"不等式 $\\frac{x-1}{x-3}<0$ 的解集为 $\\qquad$",
+        "question type":"objective question",
+        "ground_truth":"(1,3)",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":3,
+        "question（纯文本）":"已知等差数列 $\\left\\{a_{n}\\right\\}$ 的首项 $a_{1}=-3$ ，公差 $d=2$ ，则该数列的前 6 项和为 $\\qquad$",
+        "question type":"objective question",
+        "ground_truth":"12",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":4,
+        "question（纯文本）":"在二项式 $(2 x-1)^{5}$ 的展开式中，$x^{3}$ 的系数为 $\\qquad$",
+        "question type":"objective question",
+        "ground_truth":"80",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":5,
+        "question（纯文本）":"函数 $y=\\cos x$ 在 $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{4}\\right]$ 到的值域为 $\\qquad$",
+        "question type":"objective question",
+        "ground_truth":"[0.1]",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":6,
+        "question（纯文本）":"已知随机变量 $X$ 的分布为 $\\left(\\begin{array}{lll}5 & 6 & 7 \\\\ 0.2 & 0.3 & 0.5\\end{array}\\right)$ ，则期望 $E[X]=$ $\\qquad$",
+        "question type":"objective question",
+        "ground_truth":"6.3",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":7,
+        "question（纯文本）":"如图，在正四棱柱 $A B C D-A_{1} B_{1} C_{1} D_{1}$ 中，$B D=4 \\sqrt{2}, D B_{1}=9$ ，则该正四棱柱的体积为 $\\qquad$ ．",
+        "question type":"objective question",
+        "ground_truth":"112",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":8,
+        "question（纯文本）":"设 $a, b>0, a+\\frac{1}{b}=1$ ，则 $b+\\frac{1}{a}$ 的最小值为 $\\qquad$",
+        "question type":"objective question",
+        "ground_truth":"4",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":9,
+        "question（纯文本）":"4 个家长和 2 个儿童去爬山． 6 个人需要排成一条队列，要求队列的头和尾均是家长，则不同的排列个数有 $\\qquad$种",
+        "question type":"objective question",
+        "ground_truth":"288",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":10,
+        "question（纯文本）":"已知复数 $z$ 满足 $z^{2}=(\\bar{z})^{2},|z| \\leqslant 1$ ，则 $|z-2-3 i|$ 的最小值是 $\\qquad$ ",
+        "question type":"objective question",
+        "ground_truth":"2\\sqrt{2}",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":11,
+        "question（纯文本）":"小申同学观察发现，生活中有些时候影子可以完全投射在斜面上。某斜面上有两根长为 1 米的垂直于水平面放置的杆子，与斜面的接触点分别为 $A, B$ ，它们在阳光的照射下呈现出影子，阳光可视为平行光：其中一根杆子的影子在水平面上，长度为 0.4 米；另一根杆子的影子完全在斜面上，长度为 0.45 米．则斜面的底角 $\\theta=$ $\\qquad$ （结果用角度制表示，精确到 $0.01^{\\circ}$ ）",
+        "question type":"objective question",
+        "ground_truth":"12.58",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":12,
+        "question（纯文本）":"已知函数 $f(x)=\\left\\{\\begin{array}{ll}1 & x>0 \\\\ 0 & x=0 \\\\ -1 & x<0\\end{array}, \\vec{a} 、 \\vec{b} 、 \\vec{c}\\right.$ 是平面内三个不同的单位向量．若 $f(\\vec{a} \\cdot \\vec{b})+f(\\vec{b} \\cdot \\vec{c})+f(\\vec{c} \\cdot \\vec{a})=0$ ，则 $|\\vec{a}+\\vec{b}+\\vec{c}|$ 的取值范围是 $\\qquad$。",
+        "question type":"objective question",
+        "ground_truth":"(1,\\sqrt{5})",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":13,
+        "question（纯文本）":"已知事件 $A 、 B$ 相互独立，事件 $A$ 发生的概率为 $P(A)=\\frac{1}{2}$ ，事件 $B$ 发生的概率为 $P(B)=\\frac{1}{2}$ ，则事件 $A$ $\\cap B$ 发生的概率 $P(A \\cap B)$ 为 A．$\\frac{1}{8}$ ．B．$\\frac{1}{4}$ ．C．$\\frac{1}{2}$ ．D． 0",
+        "question type":"objective question",
+        "ground_truth":"B",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":14,
+        "question（纯文本）":"设 $a>0, s \\in \\mathrm{R}$ ．下列各项中，能推出 $a^{s}>a$ 的一项是 A．$a>1$ ，且 $s>0$ ．B．$a>1$ ，且 $s<0$ ．C． $0<a<1$ ，且 $s>0$ ．D． $0<a<1$ ，且 $s<0$",
+        "question type":"objective question",
+        "ground_truth":"D",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":15,
+        "question（纯文本）":"已知 $A(0,1), B(1,2), C$ 在 $\\Gamma: x^{2}-y^{2}=1(x \\geqslant 1, y \\geqslant 0)$ 上，则 $\\triangle A B C$ 的面积 A．有最大值，但没有最小值．B．没有最大值，但有最小值．C．既有最大值，也有最小值．D．既没有最大值，也没有最小值",
+        "question type":"objective question",
+        "ground_truth":"A",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":16,
+        "question（纯文本）":"设 $\\lambda=[0,1]$ ，数列 $a_{n}=10 n-9$ ，数列 $b_{n}=2^{n}$ 。设 $c_{n}=\\lambda a_{n}+(1-\\lambda) b_{n}$ 。若对任意 $\\lambda \\in[0,1]$ ，长为 $a_{n} 、 b_{n} 、 c_{n}$的线段均能构成三角形，则满足条件的 $n$ 有 A． 1 个．B． 3 个．C． 4 个．D．无穷",
+        "question type":"objective question",
+        "ground_truth":"B",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":17,
+        "question（纯文本）":"2024 年东京奥运会，中国获得了男子 $4 \\times 100$ 米混合泳接力金牌。以下是历届奥运会男子 $4 \\times 100$ 米混合泳接力项目冠军成绩记录（单位：秒），数据按照升序排列：206．78、207．46、207．95、209．34、209．35、 $210.68 、 213.73 、 214.84 、 216.93 、 216.93$（1）求这组数据的极差与中位（2）从这 10 个数据中任选 3 个，求恰有 2 个数据在 211 以上的概率；（3）若比赛成绩 $y$ 关于年份 $x$ 的回归方程为 $y=-0.311 x+\\hat{b}$ ，年份 $x$ 的平均数为 2006 ，预测 2028 年冠军队的成绩（精确到 0.01 秒）。",
+        "question type":"subjective question",
+        "ground_truth":"(1) 10.15, 210.015 (2) 0.3 (3) y=-0.311x+835.265, x=2028时，y=204.557",
+        "难度划分":"easy"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":18,
+        "question（纯文本）":"如图，$P$ 是圆锥的顶点，$O$ 是底面圆心，$A B$ 是底面直径，且 $A B=2$ ．（1）若直线 $P A$ 与圆雉底面的所成角为 $\\frac{\\pi}{3}$ ，求圆雉的侧面积；（2）已知 $Q$ 是母线 $P A$ 的中点，点 $C 、 D$ 在底面圆周上，且弧的长为 $\\frac{\\pi}{3}, C D \/ \/ A B$ ．设点 $M$ 在线段 $O C$ 上，证明：直线 $Q M \/ \/$ 平面 $P B D$ ．![](https:\/\/cdn.mathpix.com\/cropped\/2025_06_09_8dd5cad670dc0d4c1d26g-3.jpg?height=466&width=418&top_left_y=641&top_left_x=1450)",
+        "question type":"subjective question",
+        "ground_truth":"(1) 2\\pi (2) 因为OQ\/\/BP, OC\/\/BD, 所以平面OQC\/\/平面PBD,直线QM\/\/平面PBD",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":19,
+        "question（纯文本）":"已知 $f(x)=x^{2}-(m+2) x+m \\ln x, m \\in \\mathbf{R}$ 。（1）若 $f(1)=0$ ，求不等式 $f(x) \\leqslant x^{2}-1$ 的解集；（2）若函数 $y=f(x)$ 满足在 $(0,+\\infty)$ 上存在极大值，求 $m$ 的取值范围；",
+        "question type":"subjective question",
+        "ground_truth":"(1) [1,+\\infinity) (2) (0,2) U (2,+\\infinity)",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":20,
+        "question（纯文本）":"已知椭圆 $\\Gamma: \\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{5}=1(a>\\sqrt{5}), M(0, m)(m>0), A$ 是 $\\Gamma$ 的右顶点。（1）若 $\\Gamma$ 的焦点是 $(2,0)$ ，求离心率 $e$ ；（2）若 $a=4$ ，且 $\\Gamma$ 上存在一点 $P$ ，满足 $\\overrightarrow{P A}=2 \\overrightarrow{M P}$ ，求 $m$ ；（3）若 $A M$ 中垂线 $l$ 的斜率为 $2, l$ 与 $\\Gamma$ 交于 $C 、 D$ 两点，$\\angle C M D$ 为针角，求 $a$ 的取值范围．",
+        "question type":"subjective question",
+        "ground_truth":"(1) \\frac{2}{3} (2) \\sqrt{10} (3) (\\sqrt{5}, \\sqrt{11})",
+        "难度划分":"difficult"
+    },
+    {
+        "type":"shanghaijuan",
+        "id":21,
+        "question（纯文本）":"已知函数 $y=f(x)$ 的定义域为 $\\mathbf{R}$ 。对于正实数 $a$ ，定义集合 $M_{a}=\\{x \\mid f(x+a)=f(x)\\}$ 。（1）若 $f(x)=\\sin x$ ，判断 $\\frac{\\pi}{3}$ 是否是 $M_{\\pi}$ 中的元素，并说明理由；（2）若 $f(x)=\\left\\{\\begin{array}{ll}x+2 & x<0 \\\\ \\sqrt{x} & x \\geqslant 0\\end{array}, M_{a} \\neq \\varnothing\\right.$ ，求 $a$ 的取值范围；（3）设 $y=f(x)$ 是偶函数，当 $x \\in(0,1]$ 时，$f(x)=1-x$ ，且对任意 $a \\in(0,2)$ ，均有 $M_{a} \\subseteq M_{2}$ 。写出 $y=$ $f(x), x \\in(1,2)$ 的解析式，并证明：对任意实数 $c$ ，函数 $y=f(x)-c$ 在 $[-3,3]$ 上至多有 9 个零点。",
+        "question type":"subjective question",
+        "ground_truth":"(1) 不是 （2）[\\frac{7}{4}, 4) (3) f(x)=x-1, x\\ \\in (1,2)",
+        "难度划分":"difficult"
+    }
+]

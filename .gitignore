@@ -1,0 +1,23 @@
+# 环境变量文件
+.env
+
+# 虚拟环境 / 前端依赖
+.venv/
+frontend/node_modules/
+
+# 输出、缓存、日志
+output/
+output_data/
+*.pyc
+__pycache__/
+**/db/
+**/log/
+*.log
+
+# IDE / 本地工具
+.idea/
+.vscode/
+my_tools
+
+# 其它
+# output/git 和 /output/output_extract/ 已经被 output/ 覆盖，其实可以删掉
